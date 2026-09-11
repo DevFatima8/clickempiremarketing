@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickEmpire – Portfolio</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.jpg" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description"
+        content="ClickEmpire – portfolio showcasing our work in web development, graphic design, social media marketing, and more." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/vendors/growim-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-flipster-master/jquery.flipster.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/growim.css" />
+    <link rel="stylesheet" href="assets/css/growim-color-1.css" />
+
+    <style>
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-grid .portfolio-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            background: #fff;
+            border: 1px solid #f0f0f0;
+        }
+
+        .portfolio-grid .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(99, 90, 217, 0.1);
+            border-color: var(--growim-primary);
+        }
+
+        .portfolio-grid .portfolio-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .portfolio-grid .portfolio-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .portfolio-grid .portfolio-item .content {
+            padding: 20px;
+        }
+
+        .portfolio-grid .portfolio-item .content h4 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .portfolio-grid .portfolio-item .content p {
+            color: var(--growim-text);
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .portfolio-grid .portfolio-item .content .category {
+            display: inline-block;
+            background: var(--growim-primary);
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-buttons button {
+            padding: 8px 24px;
+            border-radius: 50px;
+            border: 2px solid #e0e0e0;
+            background: transparent;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--growim-text);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .filter-buttons button:hover,
+        .filter-buttons button.active {
+            border-color: var(--growim-primary);
+            background: var(--growim-primary);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <p>Click Empire Marketing</p>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="main-header main-header--two sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__inner__bg"></div>
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.jpg" alt="ClickEmpire" width="160">
+                        </a>
+                    </div>
+                    <nav class="main-header__nav main-menu">
+                        <ul class="main-menu__list">
+                            <!-- Home - Direct Link -->
+                            <li><a href="index.html">Home</a></li>
+
+                            <!-- Demos - Separate Megamenu -->
+                            <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
+                                <a href="#">Demos</a>
+                                <ul>
+                                    <li>
+                                        <div class="megamenu-popup">
+                                            <a href="#" class="megamenu-clickable--close"><span
+                                                    class="icon-close"></span></a>
+                                            <div class="megamenu-popup__content">
+                                                <div class="demo-one">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo1.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo2.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-2.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-2-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo3.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-3.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-3-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo4.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-4.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-4-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo5.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-5.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-5-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="about.html">About</a></li>
+
+                            <!-- Pages Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Our Portfolio</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Services Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Service Page</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Terms & Privacy -->
+                            <li><a href="terms-conditions.html">Terms</a></li>
+                            <li><a href="privacy-policy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-header__right">
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="main-header__toggler"><span class="flaticon-menu"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-header"
+            style="background-color: var(--growim-black); padding-top: 220px; padding-bottom: 100px;">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner1.jpeg);"></div>
+            <div class="container">
+                <h2 class="page-header__title">Our Portfolio</h2>
+                <ul class="growim-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span>Portfolio</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO GRID -->
+        <section style="padding: 80px 0;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">OUR COMPLETE PROJECTS</h6>
+                    <h3 class="sec-title__title">ClickEmpire Marketing <span>Complete</span> Portfolio</h3>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="active" data-filter="all">All</button>
+                    <button data-filter="web">Websites</button>
+                    <button data-filter="graphic">Graphic Design</button>
+                    <button data-filter="social">Social Media</button>
+                    <button data-filter="ecommerce">E-Commerce</button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Website Development Projects -->
+                    <div class="portfolio-item" data-category="web">
+                        <img src="assets/portfolio/20.PNG" alt="Portfolio Section">
+                        <div class="content">
+                            <span class="category">Web Development</span>
+                            <h4>Portfolio Section</h4>
+                            <p>Modern portfolio website with stunning UI/UX design.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="web">
+                        <img src="assets/portfolio/21.PNG" alt="Services Website">
+                        <div class="content">
+                            <span class="category">Web Development</span>
+                            <h4>Services Website</h4>
+                            <p>Professional services website with clean layout and smooth animations.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="web">
+                        <img src="assets/portfolio/22.PNG" alt="Food Services Website">
+                        <div class="content">
+                            <span class="category">Web Development</span>
+                            <h4>Food Services Website</h4>
+                            <p>Restaurant and food delivery website with menu integration.</p>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce Projects -->
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <img src="assets/portfolio/23.PNG" alt="Ecommerce Store">
+                        <div class="content">
+                            <span class="category">E-Commerce</span>
+                            <h4>Ecommerce Store</h4>
+                            <p>Full-featured online store with payment gateway integration.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <img src="assets/portfolio/24.PNG" alt="Ecommerce Website">
+                        <div class="content">
+                            <span class="category">E-Commerce</span>
+                            <h4>Ecommerce Website</h4>
+                            <p>Modern ecommerce platform with product catalog and cart functionality.</p>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design Projects -->
+                    <div class="portfolio-item" data-category="graphic">
+                        <img src="assets/portfolio/7.PNG" alt="Logo + Stationary Design">
+                        <div class="content">
+                            <span class="category">Graphic Design</span>
+                            <h4>Logo + Stationary Design</h4>
+                            <p>Complete branding package with logo and stationery design.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="graphic">
+                        <img src="assets/portfolio/8.PNG" alt="Logo + Stationary Design">
+                        <div class="content">
+                            <span class="category">Graphic Design</span>
+                            <h4>Logo + Stationary Design</h4>
+                            <p>Professional logo design with matching stationery set.</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Posts -->
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/9.PNG" alt="Educational Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Educational Posts</h4>
+                            <p>Engaging educational social media posts for learning platforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/10.PNG" alt="Food Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Food Posts</h4>
+                            <p>Delicious food photography and social media posts for restaurants.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/11.PNG" alt="Restaurant Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Restaurant Posts</h4>
+                            <p>Promotional posts for restaurants and cafes.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/12.PNG" alt="Real Estate Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Real Estate Posts</h4>
+                            <p>Property marketing posts for real estate agencies.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/13.PNG" alt="Dental and Clinical Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Dental & Clinical Posts</h4>
+                            <p>Healthcare and dental clinic promotional content.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/14.PNG" alt="Traveling Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Traveling & Vlogs</h4>
+                            <p>Travel photography and vlog editing for influencers.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/15.PNG" alt="Social Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Social Posts</h4>
+                            <p>Creative social media posts for brands and businesses.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/16.PNG" alt="Education Post">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Education Post</h4>
+                            <p>Educational content design for online learning platforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/17.PNG" alt="Solar Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Solar Posts</h4>
+                            <p>Marketing posts for solar energy companies.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/18.PNG" alt="Tutor Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Tutor Posts</h4>
+                            <p>Promotional content for tutoring services.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/19.PNG" alt="Dry Fruit Posts">
+                        <div class="content">
+                            <span class="category">Social Media</span>
+                            <h4>Dry Fruit Posts</h4>
+                            <p>Product photography and posts for dry fruit brands.</p>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Campaign -->
+                    <div class="portfolio-item" data-category="social">
+                        <img src="assets/portfolio/25.PNG" alt="Successfull Profit Marketing Campaign">
+                        <div class="content">
+                            <span class="category">Marketing</span>
+                            <h4>Successfull Profit Marketing Campaign</h4>
+                            <p>ROI-focused marketing campaign results and case study.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-one">
+            <div class="cta-one__bg" style="background-image: url(assets/images/shapes/cta-bg-1-1.png);"></div>
+            <div class="cta-one__shape-one" style="background-image: url(assets/images/shapes/cta-1-shape-1.png);">
+            </div>
+            <div class="cta-one__shape-two" style="background-image: url(assets/images/shapes/cta-1-shape-2.png);">
+            </div>
+            <div class="cta-one__shape-three" style="background-image: url(assets/images/shapes/cta-1-shape-3.png);">
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="main-footer-two" style="background-image: url(assets/images/shapes/footer-bg-2-1.png);">
+            <div class="main-footer-two__bg"></div>
+            <div class="main-footer-two__shape"
+                style="background-image: url(assets/images/shapes/footer-2-shape-1.png);"></div>
+            <div class="main-footer-two__top">
+                <div class="container">
+                    <div class="row">
+                        <!-- About / Logo -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="assets/images/logo.jpg" width="160" alt="ClickEmpire">
+                                </a>
+                                <div class="footer-widget__social">
+                                    <p class="footer-widget__social__text">Follow on</p>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-6 col-xl-2">
+                            <div class="footer-widget">
+                                <h2 class="footer-widget__title">Quick Links</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="faq.html">FAQ's</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Services (no links) -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Our Services</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li>Social Media Management</li>
+                                    <li>Performance Marketing</li>
+                                    <li>Graphic & Branding</li>
+                                    <li>Web Design & Development</li>
+                                    <li>Google Ads / PPC</li>
+                                    <li>Search Engine Optimization</li>
+                                    <li>Video Editing</li>
+                                    <li>AI Image & Video Ads</li>
+                                    <li>Custom Coding / Web Apps</li>
+                                    <li>Shopify Development</li>
+                                    <li>WordPress Development</li>
+                                    <li>Facebook Ads</li>
+                                    <li>TikTok Ads</li>
+                                    <li>Paid Website Templates</li>
+                                    <li>Ad Management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--contact">
+                                <h2 class="footer-widget__title">Contact Info</h2>
+                                <ul class="list-unstyled footer-widget__info">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923162654079">+92 316 2654079</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923294890081">+92 329 4890081</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a
+                                            href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-clock"></i>
+                                        Mon-Sat: 12:00 PM – 9:00 PM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-two__bottom">
+                <div class="container">
+                    <div class="main-footer-two__bottom__inner">
+                        <p class="main-footer-two__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span> by ClickEmpire Marketing.
+                        </p>
+                        <ul class="main-footer-two__bottom__menu">
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Nav / Search / Sidebar -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="index.html"><img src="assets/images/logo-light.png" width="155" alt=""></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:923162654079">+92 316 2654079</a></li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" class="growim-btn"><span class="growim-btn__text"><i
+                            class="flaticon-search"></i></span></button>
+            </form>
+        </div>
+    </div>
+
+    <aside class="sidebar-one">
+        <div class="sidebar-one__overlay"></div>
+        <div class="sidebar-one__content">
+            <div class="sidebar-one__close"><i class="flaticon-close"></i></div>
+            <div class="sidebar-one__logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="ClickEmpire"
+                        width="160"></a></div>
+            <p class="sidebar-one__text">We build and execute strategies designed to deliver quick wins and long-term
+                scalable results for your business.</p>
+            <h4 class="sidebar-one__title">Contact Info:</h4>
+            <ul class="sidebar-one__info">
+                <li><span class="fas fa-envelope"></span><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923162654079">+92 316 2654079</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923294890081">+92 329 4890081</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923162654079?text=Hi%20ClickEmpire%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/jquery-flipster-master/jquery.flipster.min.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <script src="assets/js/growim.js"></script>
+
+    <!-- Portfolio Filter -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-buttons button');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
