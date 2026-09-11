@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickEmpire – Portfolio Details</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.jpg" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description"
+        content="ClickEmpire – detailed portfolio showcasing our work in web development, graphic design, social media marketing, and more." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/vendors/growim-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-flipster-master/jquery.flipster.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/growim.css" />
+    <link rel="stylesheet" href="assets/css/growim-color-1.css" />
+
+    <style>
+        .portfolio-detail-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .portfolio-detail-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .portfolio-detail-info {
+            background: #f9f6f1;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-detail-info h4 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-detail-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .portfolio-detail-info ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .portfolio-detail-info ul li:last-child {
+            border-bottom: none;
+        }
+
+        .portfolio-detail-info ul li span {
+            font-weight: 600;
+            color: var(--growim-black);
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: var(--growim-primary);
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .portfolio-all-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .portfolio-all-items .item-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .portfolio-all-items .item-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--growim-primary);
+            box-shadow: 0 20px 40px rgba(99, 90, 217, 0.1);
+        }
+
+        .portfolio-all-items .item-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .portfolio-all-items .item-card .content {
+            padding: 15px 20px 20px;
+        }
+
+        .portfolio-all-items .item-card .content h5 {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-all-items .item-card .content p {
+            font-size: 13px;
+            color: var(--growim-text);
+            margin-bottom: 8px;
+        }
+
+        .portfolio-all-items .item-card .content .category-tag {
+            font-size: 11px;
+        }
+
+        .active-portfolio {
+            border-color: var(--growim-primary);
+            box-shadow: 0 20px 40px rgba(99, 90, 217, 0.15);
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .service-detail-tag {
+            display: inline-block;
+            background: var(--growim-primary);
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: whatsappBounce 2.5s ease-in-out infinite;
+            cursor: pointer;
+        }
+        .whatsapp-float:hover {
+            animation: none;
+            transform: scale(1.08);
+            filter: drop-shadow(0 8px 25px rgba(37, 211, 102, 0.4));
+        }
+        .whatsapp-float .whatsapp-icon {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s ease;
+            border: 3px solid #fff;
+        }
+        .whatsapp-float .whatsapp-icon i {
+            font-size: 34px;
+            color: #fff;
+        }
+        .whatsapp-float .whatsapp-tooltip {
+            position: absolute;
+            left: 75px;
+            background: #fff;
+            color: #075E54;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            border: 1px solid #f0f0f0;
+        }
+        .whatsapp-float .whatsapp-tooltip::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-right-color: #fff;
+        }
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .whatsapp-float .whatsapp-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.25);
+            animation: whatsappPulse 2.5s ease-in-out infinite;
+            z-index: -1;
+        }
+        .whatsapp-float .whatsapp-pulse:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+        @keyframes whatsappBounce {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+        @keyframes whatsappPulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        @media (max-width: 576px) {
+            .whatsapp-float {
+                bottom: 20px;
+                left: 20px;
+            }
+            .whatsapp-float .whatsapp-icon {
+                width: 50px;
+                height: 50px;
+            }
+            .whatsapp-float .whatsapp-icon i {
+                font-size: 28px;
+            }
+            .whatsapp-float .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <p>Click Empire Marketing</p>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="main-header main-header--two sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__inner__bg"></div>
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.jpg" alt="ClickEmpire" width="160">
+                        </a>
+                    </div>
+                    <nav class="main-header__nav main-menu">
+                        <ul class="main-menu__list">
+                            <!-- Home - Direct Link -->
+                            <li><a href="index.html">Home</a></li>
+
+                            <!-- Demos - Separate Megamenu -->
+                            <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
+                                <a href="#">Demos</a>
+                                <ul>
+                                    <li>
+                                        <div class="megamenu-popup">
+                                            <a href="#" class="megamenu-clickable--close"><span
+                                                    class="icon-close"></span></a>
+                                            <div class="megamenu-popup__content">
+                                                <div class="demo-one">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo1.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo2.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-2.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-2-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo3.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-3.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-3-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo4.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-4.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-4-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo5.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-5.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-5-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="about.html">About</a></li>
+
+                            <!-- Pages Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Our Portfolio</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Services Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Service Page</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Terms & Privacy -->
+                            <li><a href="terms-conditions.html">Terms</a></li>
+                            <li><a href="privacy-policy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-header__right">
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="main-header__toggler"><span class="flaticon-menu"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-header"
+            style="background-color: var(--growim-black); padding-top: 220px; padding-bottom: 100px;">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner1.jpeg);"></div>
+            <div class="container">
+                <h2 class="page-header__title">Portfolio Details</h2>
+                <ul class="growim-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><span>Portfolio Details</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO DETAILS -->
+        <section style="padding: 80px 0;">
+            <div class="container">
+                <!-- Selected Project Detail -->
+                <div class="row" id="projectDetail">
+                    <div class="col-lg-8">
+                        <div class="portfolio-detail-image">
+                            <img src="assets/portfolio/20.PNG" alt="Portfolio Section" id="mainProjectImage">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="portfolio-detail-info">
+                            <h4 id="projectTitle">Portfolio Section</h4>
+                            <p id="projectDescription">Modern portfolio website with stunning UI/UX design and smooth
+                                animations.</p>
+                            <hr>
+                            <ul>
+                                <li><span>Category:</span> <span id="projectCategory">Web Development</span></li>
+                                <li><span>Client:</span> <span id="projectClient">TechStart Agency</span></li>
+                                <li><span>Project Date:</span> <span id="projectDate">January 2025</span></li>
+                                <li><span>Technologies:</span> <span id="projectTech">HTML, CSS, JavaScript,
+                                        React</span></li>
+                                <li><span>Price:</span> <span id="projectPrice"
+                                        style="color: var(--growim-primary); font-weight: 700;">Rs. 30,000</span></li>
+                            </ul>
+                            <div id="serviceTags" style="margin-top: 10px;">
+                                <span class="service-detail-tag">Web Development</span>
+                                <span class="service-detail-tag">UI/UX Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Description -->
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <h3>Project Overview</h3>
+                        <p id="projectOverview">This project is a modern portfolio website designed to showcase creative
+                            work in a visually stunning way. The design focuses on clean typography, smooth animations,
+                            and an intuitive user experience. Built with React and modern CSS, it serves as a perfect
+                            template for creative professionals.</p>
+
+                        <h4 class="mt-4">Key Features</h4>
+                        <ul class="service-features" style="list-style: none; padding-left: 0;" id="projectFeatures">
+                            <li
+                                style="padding: 8px 0; padding-left: 30px; position: relative; border-bottom: 1px solid #f0f0f0;">
+                                <span
+                                    style="position: absolute; left: 0; top: 8px; color: var(--growim-primary);">✓</span>
+                                Fully responsive design for all devices
+                            </li>
+                            <li
+                                style="padding: 8px 0; padding-left: 30px; position: relative; border-bottom: 1px solid #f0f0f0;">
+                                <span
+                                    style="position: absolute; left: 0; top: 8px; color: var(--growim-primary);">✓</span>
+                                Smooth page transitions and animations
+                            </li>
+                            <li
+                                style="padding: 8px 0; padding-left: 30px; position: relative; border-bottom: 1px solid #f0f0f0;">
+                                <span
+                                    style="position: absolute; left: 0; top: 8px; color: var(--growim-primary);">✓</span>
+                                Optimized for performance and SEO
+                            </li>
+                            <li
+                                style="padding: 8px 0; padding-left: 30px; position: relative; border-bottom: 1px solid #f0f0f0;">
+                                <span
+                                    style="position: absolute; left: 0; top: 8px; color: var(--growim-primary);">✓</span>
+                                Customizable theme and color scheme
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                                <span
+                                    style="position: absolute; left: 0; top: 8px; color: var(--growim-primary);">✓</span>
+                                Integrated contact form and social media links
+                            </li>
+                        </ul>
+
+                        <!-- Package Details will be dynamically loaded by JavaScript -->
+                        <div class="package-detail-wrapper"></div>
+                    </div>
+                </div>
+
+                <!-- ALL PORTFOLIO ITEMS (20+ projects covering all services) -->
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4">Our Complete Portfolio</h3>
+                        <p>Click on any project to view its details. We have projects covering all of our core services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-all-items" id="portfolioAllItems">
+                    <!-- Web Development Projects -->
+                    <div class="item-card active-portfolio" data-id="1">
+                        <img src="assets/portfolio/20.PNG" alt="Portfolio Section">
+                        <div class="content">
+                            <span class="category-tag">Web Development</span>
+                            <h5>Portfolio Section</h5>
+                            <p>Modern portfolio website with stunning UI/UX.</p>
+                            <span class="price-badge">Rs. 30,000</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="2">
+                        <img src="assets/portfolio/21.PNG" alt="Services Website">
+                        <div class="content">
+                            <span class="category-tag">Web Development</span>
+                            <h5>Services Website</h5>
+                            <p>Professional services website with clean layout.</p>
+                            <span class="price-badge">Rs. 25,000</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="3">
+                        <img src="assets/portfolio/22.PNG" alt="Food Services Website">
+                        <div class="content">
+                            <span class="category-tag">Web Development</span>
+                            <h5>Food Services Website</h5>
+                            <p>Restaurant and food delivery website.</p>
+                            <span class="price-badge">Rs. 28,000</span>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce Projects -->
+                    <div class="item-card" data-id="4">
+                        <img src="assets/portfolio/23.PNG" alt="Ecommerce Store">
+                        <div class="content">
+                            <span class="category-tag">E-Commerce</span>
+                            <h5>Ecommerce Store</h5>
+                            <p>Full-featured online store with payment gateway.</p>
+                            <span class="price-badge">Rs. 30,000</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="5">
+                        <img src="assets/portfolio/24.PNG" alt="Ecommerce Website">
+                        <div class="content">
+                            <span class="category-tag">E-Commerce</span>
+                            <h5>Ecommerce Website</h5>
+                            <p>Modern ecommerce platform with product catalog.</p>
+                            <span class="price-badge">Rs. 35,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design Projects -->
+                    <div class="item-card" data-id="6">
+                        <img src="assets/portfolio/7.PNG" alt="Logo + Stationary Design">
+                        <div class="content">
+                            <span class="category-tag">Graphic Design</span>
+                            <h5>Logo + Stationary Design</h5>
+                            <p>Complete branding package with logo and stationery.</p>
+                            <span class="price-badge">Rs. 6,000</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="7">
+                        <img src="assets/portfolio/8.PNG" alt="Logo + Stationary Design">
+                        <div class="content">
+                            <span class="category-tag">Graphic Design</span>
+                            <h5>Logo + Stationary Design</h5>
+                            <p>Professional logo design with matching stationery.</p>
+                            <span class="price-badge">Rs. 5,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Posts -->
+                    <div class="item-card" data-id="8">
+                        <img src="assets/portfolio/9.PNG" alt="Educational Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Educational Posts</h5>
+                            <p>Engaging social media posts for learning platforms.</p>
+                            <span class="price-badge">Rs. 1,000/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="9">
+                        <img src="assets/portfolio/10.PNG" alt="Food Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Food Posts</h5>
+                            <p>Food photography and social media posts.</p>
+                            <span class="price-badge">Rs. 1,200/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="10">
+                        <img src="assets/portfolio/11.PNG" alt="Restaurant Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Restaurant Posts</h5>
+                            <p>Promotional posts for restaurants and cafes.</p>
+                            <span class="price-badge">Rs. 1,000/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="11">
+                        <img src="assets/portfolio/12.PNG" alt="Real Estate Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Real Estate Posts</h5>
+                            <p>Property marketing posts for real estate.</p>
+                            <span class="price-badge">Rs. 1,200/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="12">
+                        <img src="assets/portfolio/13.PNG" alt="Dental and Clinical Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Dental & Clinical Posts</h5>
+                            <p>Healthcare and dental clinic promotional content.</p>
+                            <span class="price-badge">Rs. 1,000/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="13">
+                        <img src="assets/portfolio/14.PNG" alt="Traveling Posts">
+                        <div class="content">
+                            <span class="category-tag">Video Editing</span>
+                            <h5>Traveling & Vlogs</h5>
+                            <p>Travel photography and vlog editing.</p>
+                            <span class="price-badge">Rs. 8,000</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="14">
+                        <img src="assets/portfolio/15.PNG" alt="Social Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Social Posts</h5>
+                            <p>Creative social media posts for brands.</p>
+                            <span class="price-badge">Rs. 1,000/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="15">
+                        <img src="assets/portfolio/16.PNG" alt="Education Post">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Education Post</h5>
+                            <p>Educational content for online learning.</p>
+                            <span class="price-badge">Rs. 1,000/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="16">
+                        <img src="assets/portfolio/17.PNG" alt="Solar Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Solar Posts</h5>
+                            <p>Marketing posts for solar energy companies.</p>
+                            <span class="price-badge">Rs. 1,200/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="17">
+                        <img src="assets/portfolio/18.PNG" alt="Tutor Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Tutor Posts</h5>
+                            <p>Promotional content for tutoring services.</p>
+                            <span class="price-badge">Rs. 1,000/post</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card" data-id="18">
+                        <img src="assets/portfolio/19.PNG" alt="Dry Fruit Posts">
+                        <div class="content">
+                            <span class="category-tag">Social Media</span>
+                            <h5>Dry Fruit Posts</h5>
+                            <p>Product photography for dry fruit brands.</p>
+                            <span class="price-badge">Rs. 1,200/post</span>
+                        </div>
+                    </div>
+
+                    <!-- Performance Marketing -->
+                    <div class="item-card" data-id="19">
+                        <img src="assets/portfolio/25.PNG" alt="Marketing Campaign">
+                        <div class="content">
+                            <span class="category-tag">Performance Marketing</span>
+                            <h5>Profit Marketing Campaign</h5>
+                            <p>ROI-focused marketing campaign case study.</p>
+                            <span class="price-badge">Custom Pricing</span>
+                        </div>
+                    </div>
+
+                    <!-- Corporate Website -->
+                    <div class="item-card" data-id="20">
+                        <img src="assets/portfolio/corporate-website.PNG" alt="Corporate Website"
+                            onerror="this.src='assets/portfolio/20.PNG'">
+                        <div class="content">
+                            <span class="category-tag">Web Development</span>
+                            <h5>Corporate Website</h5>
+                            <p>Professional corporate website with modern design.</p>
+                            <span class="price-badge">Rs. 35,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Healthcare UI/UX -->
+                    <div class="item-card" data-id="21">
+                        <img src="assets/portfolio/healthcare-uiux.PNG" alt="Healthcare UI/UX Design"
+                            onerror="this.src='assets/portfolio/20.PNG'">
+                        <div class="content">
+                            <span class="category-tag">UI/UX Design</span>
+                            <h5>Healthcare UI/UX Design</h5>
+                            <p>Healthcare app and website UI/UX design.</p>
+                            <span class="price-badge">Rs. 25,000</span>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce UI/UX -->
+                    <div class="item-card" data-id="22">
+                        <img src="assets/portfolio/ecommerce-uiux.PNG" alt="E-Commerce UI/UX Design"
+                            onerror="this.src='assets/portfolio/23.PNG'">
+                        <div class="content">
+                            <span class="category-tag">UI/UX Design</span>
+                            <h5>E-Commerce UI/UX Design</h5>
+                            <p>E-commerce platform UI/UX design.</p>
+                            <span class="price-badge">Rs. 25,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Portfolio -->
+                <div class="text-center mt-5">
+                    <a href="portfolio.html" class="growim-btn"><span class="growim-btn__text">View All
+                            Projects</span><span class="growim-btn__icon"><i
+                                class="flaticon-up-right-arrow"></i></span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-one">
+            <div class="cta-one__bg" style="background-image: url(assets/images/shapes/cta-bg-1-1.png);"></div>
+            <div class="cta-one__shape-one" style="background-image: url(assets/images/shapes/cta-1-shape-1.png);">
+            </div>
+            <div class="cta-one__shape-two" style="background-image: url(assets/images/shapes/cta-1-shape-2.png);">
+            </div>
+            <div class="cta-one__shape-three" style="background-image: url(assets/images/shapes/cta-1-shape-3.png);">
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="main-footer-two" style="background-image: url(assets/images/shapes/footer-bg-2-1.png);">
+            <div class="main-footer-two__bg"></div>
+            <div class="main-footer-two__shape"
+                style="background-image: url(assets/images/shapes/footer-2-shape-1.png);"></div>
+            <div class="main-footer-two__top">
+                <div class="container">
+                    <div class="row">
+                        <!-- About / Logo -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="assets/images/logo.jpg" width="160" alt="ClickEmpire">
+                                </a>
+                                <div class="footer-widget__social">
+                                    <p class="footer-widget__social__text">Follow on</p>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-6 col-xl-2">
+                            <div class="footer-widget">
+                                <h2 class="footer-widget__title">Quick Links</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="faq.html">FAQ's</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Services (no links) -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Our Services</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li>Social Media Management</li>
+                                    <li>Performance Marketing</li>
+                                    <li>Graphic & Branding</li>
+                                    <li>Web Design & Development</li>
+                                    <li>Google Ads / PPC</li>
+                                    <li>Search Engine Optimization</li>
+                                    <li>Video Editing</li>
+                                    <li>AI Image & Video Ads</li>
+                                    <li>Custom Coding / Web Apps</li>
+                                    <li>Shopify Development</li>
+                                    <li>WordPress Development</li>
+                                    <li>Facebook Ads</li>
+                                    <li>TikTok Ads</li>
+                                    <li>Paid Website Templates</li>
+                                    <li>Ad Management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--contact">
+                                <h2 class="footer-widget__title">Contact Info</h2>
+                                <ul class="list-unstyled footer-widget__info">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923162654079">+92 316 2654079</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923294890081">+92 329 4890081</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a
+                                            href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-clock"></i>
+                                        Mon-Sat: 12:00 PM – 9:00 PM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-two__bottom">
+                <div class="container">
+                    <div class="main-footer-two__bottom__inner">
+                        <p class="main-footer-two__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span> by ClickEmpire Marketing.
+                        </p>
+                        <ul class="main-footer-two__bottom__menu">
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Nav / Search / Sidebar -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="index.html"><img src="assets/images/logo-light.png" width="155" alt=""></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:923162654079">+92 316 2654079</a></li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" class="growim-btn"><span class="growim-btn__text"><i
+                            class="flaticon-search"></i></span></button>
+            </form>
+        </div>
+    </div>
+
+    <aside class="sidebar-one">
+        <div class="sidebar-one__overlay"></div>
+        <div class="sidebar-one__content">
+            <div class="sidebar-one__close"><i class="flaticon-close"></i></div>
+            <div class="sidebar-one__logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="ClickEmpire"
+                        width="160"></a></div>
+            <p class="sidebar-one__text">We build and execute strategies designed to deliver quick wins and long-term
+                scalable results for your business.</p>
+            <h4 class="sidebar-one__title">Contact Info:</h4>
+            <ul class="sidebar-one__info">
+                <li><span class="fas fa-envelope"></span><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923162654079">+92 316 2654079</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923294890081">+92 329 4890081</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923162654079?text=Hi%20ClickEmpire%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/jquery-flipster-master/jquery.flipster.min.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <script src="assets/js/growim.js"></script>
+
+    <!-- Portfolio Details - Interactive -->
+    <script>
+        // Portfolio Data - 22+ projects covering all services with detailed information
+        const portfolioData = {
+            '1': {
+                title: 'Portfolio Section',
+                category: 'Web Development',
+                client: 'TechStart Agency',
+                date: 'January 2025',
+                tech: 'HTML, CSS, JavaScript, React',
+                price: 'Rs. 30,000',
+                image: 'assets/portfolio/20.PNG',
+                description: 'Modern portfolio website with stunning UI/UX design and smooth animations.',
+                overview: 'This project is a modern portfolio website designed to showcase creative work in a visually stunning way. The design focuses on clean typography, smooth animations, and an intuitive user experience. Built with React and modern CSS, it serves as a perfect template for creative professionals.',
+                tags: ['Web Development', 'UI/UX Design'],
+                features: [
+                    'Fully responsive design for all devices',
+                    'Smooth page transitions and animations',
+                    'Optimized for performance and SEO',
+                    'Customizable theme and color scheme',
+                    'Integrated contact form and social media links'
+                ],
+                packages: {
+                    starter: { name: 'Starter', price: 'Rs. 15,000/mo', features: ['2 Platform', 'Facebook & Instagram', '2 Reels/motion graphic', 'Social Media Account Setup'] },
+                    standard: { name: 'Standard', price: 'Rs. 19,999/mo', features: ['2 Facebook & Instagram', '18 Static Posts Designing', '4 Reels/motion graphic', 'Content Creation'] },
+                    advance: { name: 'Advance', price: 'Rs. 30,000/mo', features: ['Facebook & Instagram', '25 Static Posts Design', '6 Reels/motion graphic', 'Custom AI Videos Ads'] }
+                }
+            },
+            '2': {
+                title: 'Services Website',
+                category: 'Web Development',
+                client: 'ServicePro',
+                date: 'February 2025',
+                tech: 'HTML, CSS, PHP, WordPress',
+                price: 'Rs. 25,000',
+                image: 'assets/portfolio/21.PNG',
+                description: 'Professional services website with clean layout and smooth animations.',
+                overview: 'A complete service-based website with appointment booking, service catalog, and client management system. Built on WordPress with custom plugins for easy content management.',
+                tags: ['Web Development', 'WordPress'],
+                features: [
+                    'Custom WordPress theme development',
+                    'Appointment booking system',
+                    'Service catalog with filters',
+                    'Client management dashboard',
+                    'SEO optimized structure'
+                ],
+                packages: {
+                    standard: { name: 'Standard', price: 'Rs. 25,000', features: ['Custom Theme', 'Booking System', 'Service Catalog', 'Client Dashboard'] }
+                }
+            },
+            '3': {
+                title: 'Food Services Website',
+                category: 'Web Development',
+                client: 'TastyBites',
+                date: 'March 2025',
+                tech: 'HTML, CSS, JavaScript, React',
+                price: 'Rs. 28,000',
+                image: 'assets/portfolio/22.PNG',
+                description: 'Restaurant and food delivery website with menu integration.',
+                overview: 'A modern restaurant website with online ordering, menu management, and delivery tracking. Built with React for a seamless user experience.',
+                tags: ['Web Development', 'React'],
+                features: [
+                    'Online ordering system',
+                    'Dynamic menu management',
+                    'Delivery tracking',
+                    'Reservation system',
+                    'Mobile-first responsive design'
+                ],
+                packages: {
+                    standard: { name: 'Standard', price: 'Rs. 28,000', features: ['Online Ordering', 'Menu Management', 'Delivery Tracking', 'Reservation System'] }
+                }
+            },
+            '4': {
+                title: 'Ecommerce Store',
+                category: 'E-Commerce',
+                client: 'ShopSmart',
+                date: 'April 2025',
+                tech: 'Shopify, Liquid, HTML, CSS',
+                price: 'Rs. 30,000',
+                image: 'assets/portfolio/23.PNG',
+                description: 'Full-featured online store with payment gateway integration.',
+                overview: 'A complete ecommerce solution built on Shopify with custom theme development. Features include product catalog, shopping cart, secure checkout, and payment gateway integration.',
+                tags: ['E-Commerce', 'Shopify'],
+                features: [
+                    'Custom Shopify theme development',
+                    'Product catalog with variants',
+                    'Secure checkout process',
+                    'Payment gateway integration',
+                    'Order management system'
+                ],
+                packages: {
+                    standard: { name: 'Complete Store', price: 'Rs. 30,000', features: ['Custom Theme', '20+ Products', 'Payment Gateway', 'SSL Certificate', '1 Month Support'] }
+                }
+            },
+            '5': {
+                title: 'Ecommerce Website',
+                category: 'E-Commerce',
+                client: 'FashionHub',
+                date: 'May 2025',
+                tech: 'WooCommerce, WordPress, PHP',
+                price: 'Rs. 35,000',
+                image: 'assets/portfolio/24.PNG',
+                description: 'Modern ecommerce platform with product catalog and cart functionality.',
+                overview: 'A full-featured ecommerce website built with WooCommerce. Includes product management, shopping cart, user accounts, and payment processing.',
+                tags: ['E-Commerce', 'WooCommerce'],
+                features: [
+                    'WooCommerce integration',
+                    'Product management system',
+                    'User accounts and profiles',
+                    'Multiple payment gateways',
+                    'Order tracking and history'
+                ],
+                packages: {
+                    standard: { name: 'Complete Store', price: 'Rs. 35,000', features: ['WooCommerce', 'Product Management', 'User Accounts', 'Payment Gateways'] }
+                }
+            },
+            '6': {
+                title: 'Logo + Stationary Design',
+                category: 'Graphic Design',
+                client: 'BrandCraft',
+                date: 'June 2025',
+                tech: 'Adobe Illustrator, Photoshop',
+                price: 'Rs. 6,000',
+                image: 'assets/portfolio/7.PNG',
+                description: 'Complete branding package with logo and stationery design.',
+                overview: 'A comprehensive branding project including logo design, business cards, letterheads, envelopes, and brand guidelines. The design reflects a modern and professional identity.',
+                tags: ['Graphic Design', 'Branding'],
+                features: [
+                    'Professional logo design (3 options)',
+                    'Business card design',
+                    'Letterhead and envelope design',
+                    'Brand style guide',
+                    'All files in vector and print-ready formats'
+                ],
+                packages: {
+                    standard: { name: 'Complete Branding', price: 'Rs. 6,000', features: ['Logo Design', 'Stationery Set', 'Brand Guidelines', 'All File Formats'] }
+                }
+            },
+            '7': {
+                title: 'Logo + Stationary Design',
+                category: 'Graphic Design',
+                client: 'EcoSolutions',
+                date: 'July 2025',
+                tech: 'Adobe Illustrator, Photoshop',
+                price: 'Rs. 5,000',
+                image: 'assets/portfolio/8.PNG',
+                description: 'Professional logo design with matching stationery set.',
+                overview: 'A complete branding solution for an eco-friendly company. Includes logo design, stationery, and marketing materials with a sustainable and modern aesthetic.',
+                tags: ['Graphic Design', 'Branding'],
+                features: [
+                    'Eco-friendly brand identity',
+                    'Logo with multiple variations',
+                    'Complete stationery set',
+                    'Marketing collateral design',
+                    'Brand guidelines document'
+                ],
+                packages: {
+                    standard: { name: 'Branding Package', price: 'Rs. 5,000', features: ['Logo Design', 'Stationery Set', 'Brand Guidelines'] }
+                }
+            },
+            '8': {
+                title: 'Educational Posts',
+                category: 'Social Media',
+                client: 'LearnSmart',
+                date: 'August 2025',
+                tech: 'Canva, Adobe Photoshop',
+                price: 'Rs. 1,000/post',
+                image: 'assets/portfolio/9.PNG',
+                description: 'Engaging social media posts for learning platforms.',
+                overview: 'A series of educational social media posts designed to promote online learning. Each post is visually engaging and optimized for maximum reach and engagement.',
+                tags: ['Social Media', 'Content Creation'],
+                features: [
+                    'Custom educational graphics',
+                    'Engaging visual design',
+                    'Optimized for all platforms',
+                    'Brand-consistent style',
+                    'High-resolution print-ready files'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,000', features: ['Custom Design', '3 Revisions', 'All File Formats'] },
+                    standard: { name: '5 Posts', price: 'Rs. 4,000', features: ['5 Custom Designs', '3 Revisions Each', 'All File Formats'] },
+                    advance: { name: '10 Posts', price: 'Rs. 6,000', features: ['10 Custom Designs', '3 Revisions Each', 'All File Formats'] }
+                }
+            },
+            '9': {
+                title: 'Food Posts',
+                category: 'Social Media',
+                client: 'FlavorHouse',
+                date: 'September 2025',
+                tech: 'Adobe Photoshop, Lightroom',
+                price: 'Rs. 1,200/post',
+                image: 'assets/portfolio/10.PNG',
+                description: 'Food photography and social media posts for restaurants.',
+                overview: 'Professional food photography and social media content designed to showcase menu items and attract customers. Includes lifestyle shots and promotional posts.',
+                tags: ['Social Media', 'Photography'],
+                features: [
+                    'Professional food photography',
+                    'Lifestyle and styled shots',
+                    'Social media optimized graphics',
+                    'Menu highlight posts',
+                    'Seasonal promotional content'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,200', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '10': {
+                title: 'Restaurant Posts',
+                category: 'Social Media',
+                client: 'CafeDelight',
+                date: 'October 2025',
+                tech: 'Adobe Photoshop, Canva',
+                price: 'Rs. 1,000/post',
+                image: 'assets/portfolio/11.PNG',
+                description: 'Promotional posts for restaurants and cafes.',
+                overview: 'A collection of promotional social media posts for a cafe chain. Designed to drive foot traffic and increase brand awareness with visually appealing content.',
+                tags: ['Social Media', 'Content Creation'],
+                features: [
+                    'Promotional graphic design',
+                    'Menu highlight posts',
+                    'Event promotion graphics',
+                    'Seasonal offers and discounts',
+                    'Engaging call-to-action designs'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,000', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '11': {
+                title: 'Real Estate Posts',
+                category: 'Social Media',
+                client: 'PrimeProperties',
+                date: 'November 2025',
+                tech: 'Adobe Photoshop, InDesign',
+                price: 'Rs. 1,200/post',
+                image: 'assets/portfolio/12.PNG',
+                description: 'Property marketing posts for real estate agencies.',
+                overview: 'High-quality real estate marketing posts designed to showcase properties and attract potential buyers. Includes property highlights and market insights.',
+                tags: ['Social Media', 'Marketing'],
+                features: [
+                    'Property showcase graphics',
+                    'Market insight posts',
+                    'Agent promotion graphics',
+                    'Open house announcements',
+                    'Professional real estate branding'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,200', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '12': {
+                title: 'Dental & Clinical Posts',
+                category: 'Social Media',
+                client: 'SmileCare',
+                date: 'December 2025',
+                tech: 'Adobe Photoshop, Illustrator',
+                price: 'Rs. 1,000/post',
+                image: 'assets/portfolio/13.PNG',
+                description: 'Healthcare and dental clinic promotional content.',
+                overview: 'Social media content designed for a dental clinic to build trust and attract new patients. Includes educational posts, patient testimonials, and service highlights.',
+                tags: ['Social Media', 'Healthcare'],
+                features: [
+                    'Healthcare-specific graphics',
+                    'Patient testimonial posts',
+                    'Service highlight graphics',
+                    'Educational health tips',
+                    'Brand-consistent clinical design'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,000', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '13': {
+                title: 'Traveling & Vlogs',
+                category: 'Video Editing',
+                client: 'Wanderlust',
+                date: 'January 2026',
+                tech: 'Premiere Pro, After Effects',
+                price: 'Rs. 8,000',
+                image: 'assets/portfolio/14.PNG',
+                description: 'Travel photography and vlog editing for influencers.',
+                overview: 'Professional video editing for travel vlogs and social media content. Includes color grading, transitions, sound design, and motion graphics.',
+                tags: ['Video Editing', 'Content Creation'],
+                features: [
+                    'Professional video editing',
+                    'Color grading and correction',
+                    'Motion graphics and titles',
+                    'Sound design and audio mixing',
+                    'Optimized for social media platforms'
+                ],
+                packages: {
+                    standard: { name: 'Video Editing', price: 'Rs. 8,000', features: ['Full Video Editing', 'Color Grading', 'Motion Graphics', 'Sound Design'] }
+                }
+            },
+            '14': {
+                title: 'Social Posts',
+                category: 'Social Media',
+                client: 'UrbanStyle',
+                date: 'February 2026',
+                tech: 'Adobe Photoshop, Canva',
+                price: 'Rs. 1,000/post',
+                image: 'assets/portfolio/15.PNG',
+                description: 'Creative social media posts for brands and businesses.',
+                overview: 'A series of creative social media posts designed for a fashion brand. Focused on engaging visuals and brand-consistent messaging.',
+                tags: ['Social Media', 'Content Creation'],
+                features: [
+                    'Fashion-specific graphics',
+                    'Product showcase posts',
+                    'Campaign visuals',
+                    'Engaging lifestyle content',
+                    'Brand-consistent design'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,000', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '15': {
+                title: 'Education Post',
+                category: 'Social Media',
+                client: 'EduWorld',
+                date: 'March 2026',
+                tech: 'Adobe Photoshop, Illustrator',
+                price: 'Rs. 1,000/post',
+                image: 'assets/portfolio/16.PNG',
+                description: 'Educational content design for online learning platforms.',
+                overview: 'Educational social media content designed to promote online courses and learning resources. Includes visually engaging infographics and course highlights.',
+                tags: ['Social Media', 'Content Creation'],
+                features: [
+                    'Educational infographics',
+                    'Course promotion posts',
+                    'Student success stories',
+                    'Engaging educational content',
+                    'Brand-consistent design'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,000', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '16': {
+                title: 'Solar Posts',
+                category: 'Social Media',
+                client: 'GreenEnergy',
+                date: 'April 2026',
+                tech: 'Adobe Photoshop, Canva',
+                price: 'Rs. 1,200/post',
+                image: 'assets/portfolio/17.PNG',
+                description: 'Marketing posts for solar energy companies.',
+                overview: 'Social media marketing content for a solar energy company. Focused on promoting sustainable energy solutions and building brand awareness.',
+                tags: ['Social Media', 'Marketing'],
+                features: [
+                    'Sustainability-focused graphics',
+                    'Product highlight posts',
+                    'Educational energy content',
+                    'Customer success stories',
+                    'Engaging environmental messaging'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,200', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '17': {
+                title: 'Tutor Posts',
+                category: 'Social Media',
+                client: 'TutorHub',
+                date: 'May 2026',
+                tech: 'Adobe Photoshop, Canva',
+                price: 'Rs. 1,000/post',
+                image: 'assets/portfolio/18.PNG',
+                description: 'Promotional content for tutoring services.',
+                overview: 'Social media promotional content for a tutoring service. Designed to attract students and highlight subject expertise.',
+                tags: ['Social Media', 'Content Creation'],
+                features: [
+                    'Tutoring service graphics',
+                    'Subject highlight posts',
+                    'Student success testimonials',
+                    'Promotional offers',
+                    'Engaging educational content'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,000', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '18': {
+                title: 'Dry Fruit Posts',
+                category: 'Social Media',
+                client: 'NutriPack',
+                date: 'June 2026',
+                tech: 'Adobe Photoshop, Lightroom',
+                price: 'Rs. 1,200/post',
+                image: 'assets/portfolio/19.PNG',
+                description: 'Product photography and posts for dry fruit brands.',
+                overview: 'Professional product photography and social media content for a dry fruit brand. Focused on showcasing product quality and health benefits.',
+                tags: ['Social Media', 'Photography'],
+                features: [
+                    'Professional product photography',
+                    'Lifestyle and styled shots',
+                    'Health benefits graphics',
+                    'Product highlight posts',
+                    'Brand-consistent design'
+                ],
+                packages: {
+                    starter: { name: 'Single Post', price: 'Rs. 1,200', features: ['Custom Design', '3 Revisions', 'All File Formats'] }
+                }
+            },
+            '19': {
+                title: 'Profit Marketing Campaign',
+                category: 'Performance Marketing',
+                client: 'ScaleUp',
+                date: 'July 2026',
+                tech: 'Meta Ads, Google Ads, Analytics',
+                price: 'Custom Pricing',
+                image: 'assets/portfolio/25.PNG',
+                description: 'ROI-focused marketing campaign case study.',
+                overview: 'A comprehensive performance marketing campaign across Meta and Google platforms. Achieved 200% ROAS with a focus on audience targeting and creative optimization.',
+                tags: ['Performance Marketing', 'Ad Management'],
+                features: [
+                    'Multi-platform ad campaign management',
+                    'Advanced audience targeting',
+                    'Creative optimization and A/B testing',
+                    'Detailed analytics and reporting',
+                    'Scalable growth strategy'
+                ],
+                packages: {
+                    standard: { name: 'Custom Campaign', price: 'Custom Pricing', features: ['Multi-Platform', 'Audience Targeting', 'Creative Optimization', 'Analytics'] }
+                }
+            },
+            '20': {
+                title: 'Corporate Website',
+                category: 'Web Development',
+                client: 'KNG Global Trade',
+                date: 'August 2026',
+                tech: 'HTML, CSS, PHP, WordPress',
+                price: 'Rs. 35,000',
+                image: 'assets/portfolio/corporate-website.PNG',
+                description: 'Professional corporate website with modern design.',
+                overview: 'A complete corporate website for KNG Global Trade. Features include company profile, services, client testimonials, and contact management system.',
+                tags: ['Web Development', 'Corporate'],
+                features: [
+                    'Corporate website design',
+                    'Company profile pages',
+                    'Service catalog',
+                    'Client testimonials',
+                    'Contact management system'
+                ],
+                packages: {
+                    standard: { name: 'Corporate Website', price: 'Rs. 35,000', features: ['Custom Design', '10 Pages', 'Contact Form', 'SEO Optimized'] }
+                }
+            },
+            '21': {
+                title: 'Healthcare UI/UX Design',
+                category: 'UI/UX Design',
+                client: 'MediCare Plus',
+                date: 'September 2026',
+                tech: 'Figma, Adobe XD, Illustrator',
+                price: 'Rs. 25,000',
+                image: 'assets/portfolio/healthcare-uiux.PNG',
+                description: 'Healthcare app and website UI/UX design.',
+                overview: 'A comprehensive UI/UX design for a healthcare platform. Includes patient portal, appointment booking, and telemedicine features with a clean and accessible interface.',
+                tags: ['UI/UX Design', 'Healthcare'],
+                features: [
+                    'Healthcare app design',
+                    'Patient portal UI',
+                    'Appointment booking',
+                    'Telemedicine features',
+                    'Accessibility compliance'
+                ],
+                packages: {
+                    standard: { name: 'UI/UX Design', price: 'Rs. 25,000', features: ['Full UI/UX Design', 'Patient Portal', 'Booking System', 'Telemedicine'] }
+                }
+            },
+            '22': {
+                title: 'E-Commerce UI/UX Design',
+                category: 'UI/UX Design',
+                client: 'ShopVerse',
+                date: 'October 2026',
+                tech: 'Figma, Adobe XD, Illustrator',
+                price: 'Rs. 25,000',
+                image: 'assets/portfolio/ecommerce-uiux.PNG',
+                description: 'E-commerce platform UI/UX design.',
+                overview: 'A complete UI/UX design for an e-commerce platform. Focused on conversion optimization, user flow, and seamless checkout experience.',
+                tags: ['UI/UX Design', 'E-Commerce'],
+                features: [
+                    'E-commerce UI design',
+                    'Conversion optimization',
+                    'User flow mapping',
+                    'Checkout experience',
+                    'Mobile-first design'
+                ],
+                packages: {
+                    standard: { name: 'UI/UX Design', price: 'Rs. 25,000', features: ['Full UI/UX Design', 'Conversion Optimization', 'User Flow', 'Checkout Design'] }
+                }
+            }
+        };
+
+        // Click handler for portfolio items
+        document.querySelectorAll('.item-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const id = this.getAttribute('data-id');
+                const data = portfolioData[id];
+                if (!data) return;
+
+                // Update active state
+                document.querySelectorAll('.item-card').forEach(c => c.classList.remove('active-portfolio'));
+                this.classList.add('active-portfolio');
+
+                // Update project details
+                document.getElementById('projectTitle').textContent = data.title;
+                document.getElementById('projectCategory').textContent = data.category;
+                document.getElementById('projectClient').textContent = data.client;
+                document.getElementById('projectDate').textContent = data.date;
+                document.getElementById('projectTech').textContent = data.tech;
+                document.getElementById('projectPrice').textContent = data.price;
+                document.getElementById('projectDescription').textContent = data.description;
+                document.getElementById('projectOverview').textContent = data.overview;
+                document.getElementById('mainProjectImage').src = data.image;
+
+                // Update tags
+                const tagsContainer = document.getElementById('serviceTags');
+                tagsContainer.innerHTML = '';
+                data.tags.forEach(tag => {
+                    const span = document.createElement('span');
+                    span.className = 'service-detail-tag';
+                    span.textContent = tag;
+                    tagsContainer.appendChild(span);
+                });
+
+                // Update features
+                const featuresList = document.getElementById('projectFeatures');
+                featuresList.innerHTML = '';
+                data.features.forEach(feature => {
+                    const li = document.createElement('li');
+                    li.style.cssText = 'padding: 8px 0; padding-left: 30px; position: relative; border-bottom: 1px solid #f0f0f0;';
+                    li.innerHTML = `<span style="position: absolute; left: 0; top: 8px; color: var(--growim-primary);">✓</span> ${feature}`;
+                    featuresList.appendChild(li);
+                });
+
+                // Update package details - clear and rebuild
+                const packageWrapper = document.querySelector('.package-detail-wrapper');
+                if (packageWrapper) {
+                    // Clear existing content
+                    packageWrapper.innerHTML = '';
+                    
+                    if (data.packages) {
+                        const pkgKeys = Object.keys(data.packages);
+                        let packageHTML = `
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <h4>Package Details</h4>
+                                    <div style="background: #f9f6f1; padding: 25px; border-radius: 16px;">
+                                        <div class="row">
+                        `;
+                        pkgKeys.forEach(key => {
+                            const pkg = data.packages[key];
+                            const colSize = pkgKeys.length === 3 ? '4' : '6';
+                            packageHTML += `
+                                <div class="col-md-${colSize}">
+                                    <h5 style="color: var(--growim-primary);">${pkg.name}</h5>
+                                    <p><strong>${pkg.price}</strong></p>
+                                    <ul style="list-style: none; padding-left: 0; font-size: 14px;">
+                                        ${pkg.features.map(f => `<li>✓ ${f}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            `;
+                        });
+                        packageHTML += `
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        packageWrapper.innerHTML = packageHTML;
+                    }
+                }
+
+                // Scroll to top of project detail
+                document.getElementById('projectDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Initial load - trigger first project
+        document.addEventListener('DOMContentLoaded', function () {
+            const firstCard = document.querySelector('.item-card.active-portfolio');
+            if (firstCard) {
+                firstCard.click();
+            }
+        });
+    </script>
+</body>
+
+</html>

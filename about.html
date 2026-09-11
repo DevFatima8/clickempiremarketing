@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickEmpire – About Us</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.jpg" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description"
+        content="ClickEmpire – strategic digital marketing agency. We drive revenue, not just impressions." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/vendors/growim-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-flipster-master/jquery.flipster.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/growim.css" />
+    <link rel="stylesheet" href="assets/css/growim-color-1.css" />
+
+    <style>
+        /* Journey timeline – center aligned with active dot */
+        .journey-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #e0e0e0;
+            transform: translateX(-50%);
+        }
+
+        .journey-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .journey-item .dot {
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px #ccc;
+            transition: 0.3s;
+        }
+
+        .journey-item.active .dot {
+            background: var(--growim-primary);
+            box-shadow: 0 0 0 4px var(--growim-primary);
+        }
+
+        .journey-content {
+            width: 45%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .journey-item:nth-child(odd) .journey-content {
+            margin-right: 55%;
+        }
+
+        .journey-item:nth-child(even) .journey-content {
+            margin-left: 55%;
+        }
+
+        .journey-item.active .journey-content {
+            border-color: var(--growim-primary);
+            box-shadow: 0 10px 30px rgba(99, 90, 217, 0.12);
+        }
+
+        @media (max-width: 768px) {
+            .journey-timeline::before {
+                left: 20px;
+            }
+
+            .journey-item {
+                justify-content: flex-start;
+                padding-left: 50px;
+            }
+
+            .journey-item .dot {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+
+            .journey-content {
+                width: 100%;
+                margin: 0 !important;
+            }
+
+            .journey-item:nth-child(odd) .journey-content {
+                margin-right: 0;
+            }
+
+            .journey-item:nth-child(even) .journey-content {
+                margin-left: 0;
+            }
+        }
+
+        .core-values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .core-values-grid .value-item {
+            background: #fff;
+            padding: 25px 10px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f0f0f0;
+            transition: 0.3s;
+        }
+
+        .core-values-grid .value-item:hover {
+            transform: translateY(-6px);
+            border-color: var(--growim-primary);
+        }
+
+        .core-values-grid .value-item i {
+            font-size: 36px;
+            color: var(--growim-primary);
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .work-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .work-steps .step {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 20px;
+            min-width: 180px;
+            flex: 1 1 180px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+        }
+
+        .work-steps .step:hover {
+            border-color: var(--growim-primary);
+            transform: translateY(-5px);
+        }
+
+        .work-steps .step .step-num {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--growim-primary);
+            opacity: 0.15;
+            display: block;
+            line-height: 1;
+        }
+
+        .trusted-logos-slider .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+        }
+
+        .trusted-logos-slider .item img {
+            max-height: 60px;
+            width: auto;
+            filter: none !important;
+            opacity: 1 !important;
+            transition: 0.3s;
+        }
+
+        .trusted-logos-slider .item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <p>Click Empire Marketing</p>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- HEADER (same as index) -->
+        <header class="main-header main-header--two sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__inner__bg"></div>
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.jpg" alt="ClickEmpire" width="160">
+                        </a>
+                    </div>
+                    <nav class="main-header__nav main-menu">
+                        <ul class="main-menu__list">
+                            <!-- Home - Direct Link -->
+                            <li><a href="index.html">Home</a></li>
+
+                            <!-- Demos - Separate Megamenu -->
+                            <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
+                                <a href="#">Demos</a>
+                                <ul>
+                                    <li>
+                                        <div class="megamenu-popup">
+                                            <a href="#" class="megamenu-clickable--close"><span
+                                                    class="icon-close"></span></a>
+                                            <div class="megamenu-popup__content">
+                                                <div class="demo-one">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo1.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo2.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-2.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-2-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo3.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-3.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-3-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo4.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-4.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-4-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo5.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-5.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-5-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="about.html">About</a></li>
+
+                            <!-- Pages Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Our Portfolio</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Services Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Service Page</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Terms & Privacy -->
+                            <li><a href="terms-conditions.html">Terms</a></li>
+                            <li><a href="privacy-policy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-header__right">
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="main-header__toggler"><span class="flaticon-menu"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-header"
+            style="background-color: var(--growim-black); padding-top: 220px; padding-bottom: 100px;">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner1.jpeg);"></div>
+            <div class="container">
+                <h2 class="page-header__title">About Us</h2>
+                <ul class="growim-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span>About</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ABOUT INTRO (Our Story, Mission, Vision) -->
+        <section class="about-two" style="padding: 80px 0;">
+            <div class="container">
+                <div class="row align-items-center gutter-y-30">
+                    <div class="col-lg-6">
+                        <div class="about-two__image-wrapper wow fadeInLeft">
+                            <div class="about-two__image">
+                                <img src="assets/images/marketing.jpeg" alt="ClickEmpire team">
+                            </div>
+                            <div class="about-two__experiance count-box wow fadeInUp" data-wow-delay="400ms">
+                                <div class="about-two__experiance__border"></div>
+                                <div class="about-two__experiance__inner">
+                                    <div class="about-two__experiance__years"><span class="count-text" data-stop="5"
+                                            data-speed="1500">5</span>+</div>
+                                    <p class="about-two__experiance__text">years of experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight">
+                        <div class="sec-title text-left">
+                            <h6 class="sec-title__tagline">Your Trusted Agency</h6>
+                            <h3 class="sec-title__title">We're Strategic <span>Digital Marketing</span> Agency</h3>
+                        </div>
+                        <p style="font-weight: 500; margin-bottom: 20px;">We're always available to support your growth
+                            and campaigns. Get quick responses, updates, and solutions anytime you need.</p>
+                        <p><strong>Our Story</strong> – We started ClickEmpire to turn marketing into real revenue, not
+                            just impressions. Today, we help brands scale with proven strategies and consistent results.
+                        </p>
+                        <p><strong>Our Mission</strong> – To help businesses grow through data-driven marketing and
+                            high-converting systems. We focus on maximizing ROI and delivering measurable results.</p>
+                        <p><strong>Our Vision</strong> – To become a global leader in performance marketing and business
+                            growth. We aim to build predictable, scalable revenue systems for every brand.</p>
+                        <a href="contact.html" class="growim-btn mt-3"><span class="growim-btn__text">More About
+                                Us</span><span class="growim-btn__icon"><i
+                                    class="flaticon-up-right-arrow"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE VALUES (from image) -->
+        <section style="padding: 60px 0; background: #f9f6f1;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">CORE VALUES</h6>
+                    <h3 class="sec-title__title">What Drives <span>Us</span></h3>
+                </div>
+                <div class="core-values-grid">
+                    <div class="value-item"><i class="fas fa-chart-line"></i>
+                        <h5>Results First</h5>
+                    </div>
+                    <div class="value-item"><i class="fas fa-database"></i>
+                        <h5>Data Driven</h5>
+                    </div>
+                    <div class="value-item"><i class="fas fa-paint-brush"></i>
+                        <h5>Creative Edge</h5>
+                    </div>
+                    <div class="value-item"><i class="fas fa-users"></i>
+                        <h5>Client Focus</h5>
+                    </div>
+                    <div class="value-item"><i class="fas fa-lightbulb"></i>
+                        <h5>Innovation</h5>
+                    </div>
+                    <div class="value-item"><i class="fas fa-eye"></i>
+                        <h5>Transparency</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW WE WORK (Research, Strategy, Execution, Scaling) -->
+        <section style="padding: 70px 0;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">HOW WE WORK</h6>
+                    <h3 class="sec-title__title">Our <span>Process</span></h3>
+                </div>
+                <div class="work-steps">
+                    <div class="step"><span class="step-num">01</span>
+                        <h5>Research</h5>
+                        <p>Deep market & audience analysis</p>
+                    </div>
+                    <div class="step"><span class="step-num">02</span>
+                        <h5>Strategy</h5>
+                        <p>Data-backed action plan</p>
+                    </div>
+                    <div class="step"><span class="step-num">03</span>
+                        <h5>Execution</h5>
+                        <p>Flawless implementation</p>
+                    </div>
+                    <div class="step"><span class="step-num">04</span>
+                        <h5>Scaling</h5>
+                        <p>Optimize & grow</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR JOURNEY – centered timeline with scroll-activated dots -->
+        <section style="padding: 70px 0; background: #f9f6f1;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">OUR JOURNEY</h6>
+                    <h3 class="sec-title__title">The <span>Road</span> So Far</h3>
+                </div>
+                <div class="journey-timeline" id="journeyTimeline">
+                    <div class="journey-item" data-year="2021">
+                        <div class="dot"></div>
+                        <div class="journey-content">
+                            <h4>2021</h4>
+                            <p>Foundation stage – laid the groundwork for ClickEmpire.</p>
+                        </div>
+                    </div>
+                    <div class="journey-item" data-year="2022">
+                        <div class="dot"></div>
+                        <div class="journey-content">
+                            <h4>2022</h4>
+                            <p>First clients onboarded – started delivering real results.</p>
+                        </div>
+                    </div>
+                    <div class="journey-item" data-year="2023">
+                        <div class="dot"></div>
+                        <div class="journey-content">
+                            <h4>2023</h4>
+                            <p>Scaling brands – expanded service offerings and team.</p>
+                        </div>
+                    </div>
+                    <div class="journey-item" data-year="2024">
+                        <div class="dot"></div>
+                        <div class="journey-content">
+                            <h4>2024</h4>
+                            <p>AI systems introduced – next-gen ad creatives & automation.</p>
+                        </div>
+                    </div>
+                    <div class="journey-item" data-year="2025">
+                        <div class="dot"></div>
+                        <div class="journey-content">
+                            <h4>2025</h4>
+                            <p>Global expansion – serving clients across multiple countries.</p>
+                        </div>
+                    </div>
+                    <div class="journey-item" data-year="2026">
+                        <div class="dot"></div>
+                        <div class="journey-content">
+                            <h4>2026</h4>
+                            <p>Next-gen growth systems – building for the future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS (from image) -->
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <div class="row text-center gutter-y-30">
+                    <div class="col-md-4">
+                        <div class="counter-one__counter__number"
+                            style="font-size: 52px; justify-content: center; color: var(--growim-primary);"><span
+                                class="count-text" data-stop="5" data-speed="1500">5</span>+</div>
+                        <p class="counter-one__counter__text">Years of Experience</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="counter-one__counter__number"
+                            style="font-size: 52px; justify-content: center; color: var(--growim-primary);"><span
+                                class="count-text" data-stop="200" data-speed="1500">200</span>+</div>
+                        <p class="counter-one__counter__text">Successful Marketing Campaigns</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="counter-one__counter__number"
+                            style="font-size: 52px; justify-content: center; color: var(--growim-primary);"><span
+                                class="count-text" data-stop="75" data-speed="1500">75</span>%</div>
+                        <p class="counter-one__counter__text">Average Increase in Website Traffic</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM (CEO + members) -->
+        <section class="team-two" style="padding: 60px 0;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">OUR EXPERT TEAM</h6>
+                    <h3 class="sec-title__title">Meet Our <span>Leaders</span></h3>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="00ms">
+                        <div class="team-card-two">
+                            <div class="team-card-two__image"><img src="assets/images/ceo-ava.jpeg" alt="Sheraz Ahmad">
+                            </div>
+                            <div class="team-card-two__content">
+                                <h3 class="team-card-two__title"><a>Sheraz Ahmad</a></h3>
+                                <p class="team-card-two__designation">CEO & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="team-card-two">
+                            <div class="team-card-two__image"><img src="assets/images/manager-ava.jpeg"
+                                    alt="Fatima Zahra"></div>
+                            <div class="team-card-two__content">
+                                <h3 class="team-card-two__title"><a>Fatima Zahra</a></h3>
+                                <p class="team-card-two__designation">Operations Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="team-card-two">
+                            <div class="team-card-two__image"><img src="assets/images/team4.jpeg" alt="Member">
+                            </div>
+                            <div class="team-card-two__content">
+                                <h3 class="team-card-two__title"><a>Ali Hassan</a></h3>
+                                <p class="team-card-two__designation">Head of Performance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="team-card-two">
+                            <div class="team-card-two__image"><img src="assets/images/team5.png" alt="Member">
+                            </div>
+                            <div class="team-card-two__content">
+                                <h3 class="team-card-two__title"><a>Sara Khan</a></h3>
+                                <p class="team-card-two__designation">Creative Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials-two">
+            <div class="testimonials-two__bg"
+                style="background-image: url(assets/images/shapes/testimonials-bg-2.png);"></div>
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">TESTIMONIALS</h6>
+                    <h3 class="sec-title__title">What Our <span>Clients</span> Say</h3>
+                </div>
+                <div class="testimonials-two__carousel growim-owl__carousel owl-carousel" data-owl-options='{
+                    "items": 1,
+                    "margin": 30,
+                    "loop": true,
+                    "smartSpeed": 700,
+                    "nav": true,
+                    "navText": ["<i class=\"flaticon-left-arrows\"></i>","<i class=\"flaticon-right-arrows\"></i>"],
+                    "dots": false,
+                    "autoplay": true,
+                    "responsive": {
+                        "0": { "items": 1 },
+                        "768": { "items": 2 },
+                        "992": { "items": 3 }
+                    }
+                }'>
+                    <!-- Testimonial 1 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                ClickEmpire transformed our online presence. Their social media management boosted our
+                                engagement by 200% in just three months!
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client1.png" alt="client">
+                                <h3 class="testimonials-two__item__name">Ali Hamid</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                The Shopify store they built for us is a masterpiece. Sales increased by 150% within the
+                                first month.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client2.png" alt="client">
+                                <h3 class="testimonials-two__item__name">Abdullah</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                Their Google Ads & SEO expertise took our business to the top of search results. Highly
+                                recommend!
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client3.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Amjad</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                The AI-generated video ads created by ClickEmpire are truly next-level. Our conversions
+                                have never been better.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client4.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Piyush</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                From web development to performance marketing, ClickEmpire delivers excellence at every
+                                step.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client5.png" alt="client">
+                                <h3 class="testimonials-two__item__name">Pritam</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                Their TikTok ads strategy was a game-changer for our brand. We saw a 300% ROAS in the
+                                first month.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client6.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Laiba</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 7 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                ClickEmpire's graphic design team is incredibly talented. Our brand identity has never
+                                looked stronger.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client7.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Swaiba</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 8 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                We've worked with many agencies, but ClickEmpire stands out for their transparency and
+                                results.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client8.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Nabeela</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 9 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                Their website development services are top-notch. Our new site is fast, responsive, and
+                                looks incredible.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client8.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Ibrahim</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 10 -->
+                    <div class="item">
+                        <div class="testimonials-two__item">
+                            <div class="testimonials-two__item__quote"><img
+                                    src="assets/images/shapes/quote-image-2.png"></div>
+                            <div class="testimonials-two__item__content">
+                                ClickEmpire's social media management is unmatched. They know how to build a loyal
+                                community.
+                                <div class="testimonials-two__item__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonials-two__item__author">
+                                <img src="assets/images/client10.jpeg" alt="client">
+                                <h3 class="testimonials-two__item__name">Dawood</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED PARTNERS / COMPANIES LOGOS (slider) – NO GRAYSCALE, NO HOVER EFFECT -->
+        <div class="client-carousel" style="padding: 50px 0;">
+            <div class="container">
+                <h5 class="client-carousel__title">Trusted Partners</h5>
+                <div class="client-carousel__one growim-owl__carousel owl-theme owl-carousel trusted-logos-slider"
+                    data-owl-options='{
+          "items": 6, "margin": 40, "smartSpeed": 700, "loop":true, "autoplay": true,
+          "nav":false, "dots":false,
+          "responsive": { "0": { "items": 3, "margin": 10 }, "768": { "items": 5 }, "992": { "items": 6 }, "1200": { "items": 8 } }
+        }'>
+                    <div class="item"><img src="assets/images/companies logos/1.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/2.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/3.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/4.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/5.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/6.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/7.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/8.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/9.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/10.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/11.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/12.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/13.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/14.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/15.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/16.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/17.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/18.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/19.jpg" alt="partner"></div>
+                    <div class="item"><img src="assets/images/companies logos/20.jpg" alt="partner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA SECTION (same as index) -->
+        <section class="cta-one">
+            <div class="cta-one__bg" style="background-image: url(assets/images/shapes/cta-bg-1-1.png);"></div>
+            <div class="cta-one__shape-one" style="background-image: url(assets/images/shapes/cta-1-shape-1.png);">
+            </div>
+            <div class="cta-one__shape-two" style="background-image: url(assets/images/shapes/cta-1-shape-2.png);">
+            </div>
+            <div class="cta-one__shape-three" style="background-image: url(assets/images/shapes/cta-1-shape-3.png);">
+            </div>
+        </section>
+
+        <!-- FOOTER (same as index) -->
+        <footer class="main-footer-two" style="background-image: url(assets/images/shapes/footer-bg-2-1.png);">
+            <div class="main-footer-two__bg"></div>
+            <div class="main-footer-two__shape"
+                style="background-image: url(assets/images/shapes/footer-2-shape-1.png);"></div>
+            <div class="main-footer-two__top">
+                <div class="container">
+                    <div class="row">
+                        <!-- About / Logo -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="assets/images/logo.jpg" width="160" alt="ClickEmpire">
+                                </a>
+                                <div class="footer-widget__social">
+                                    <p class="footer-widget__social__text">Follow on</p>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-6 col-xl-2">
+                            <div class="footer-widget">
+                                <h2 class="footer-widget__title">Quick Links</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="faq.html">FAQ's</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Services (no links) -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Our Services</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li>Social Media Management</li>
+                                    <li>Performance Marketing</li>
+                                    <li>Graphic & Branding</li>
+                                    <li>Web Design & Development</li>
+                                    <li>Google Ads / PPC</li>
+                                    <li>Search Engine Optimization</li>
+                                    <li>Video Editing</li>
+                                    <li>AI Image & Video Ads</li>
+                                    <li>Custom Coding / Web Apps</li>
+                                    <li>Shopify Development</li>
+                                    <li>WordPress Development</li>
+                                    <li>Facebook Ads</li>
+                                    <li>TikTok Ads</li>
+                                    <li>Paid Website Templates</li>
+                                    <li>Ad Management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--contact">
+                                <h2 class="footer-widget__title">Contact Info</h2>
+                                <ul class="list-unstyled footer-widget__info">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923162654079">+92 316 2654079</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923294890081">+92 329 4890081</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a
+                                            href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-clock"></i>
+                                        Mon-Sat: 12:00 PM – 9:00 PM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-two__bottom">
+                <div class="container">
+                    <div class="main-footer-two__bottom__inner">
+                        <p class="main-footer-two__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span> by ClickEmpire Marketing.
+                        </p>
+                        <ul class="main-footer-two__bottom__menu">
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Nav / Search / Sidebar -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="index.html"><img src="assets/images/logo-light.png" width="155" alt=""></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:923162654079">+92 316 2654079</a></li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" class="growim-btn"><span class="growim-btn__text"><i
+                            class="flaticon-search"></i></span></button>
+            </form>
+        </div>
+    </div>
+
+    <aside class="sidebar-one">
+        <div class="sidebar-one__overlay"></div>
+        <div class="sidebar-one__content">
+            <div class="sidebar-one__close"><i class="flaticon-close"></i></div>
+            <div class="sidebar-one__logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="ClickEmpire"
+                        width="160"></a></div>
+            <p class="sidebar-one__text">We build and execute strategies designed to deliver quick wins and long-term
+                scalable results for your business.</p>
+            <h4 class="sidebar-one__title">Contact Info:</h4>
+            <ul class="sidebar-one__info">
+                <li><span class="fas fa-envelope"></span><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923162654079">+92 316 2654079</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923294890081">+92 329 4890081</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923162654079?text=Hi%20ClickEmpire%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/jquery-flipster-master/jquery.flipster.min.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <script src="assets/js/growim.js"></script>
+
+    <!-- Journey scroll trigger -->
+    <script>
+        (function () {
+            const items = document.querySelectorAll('.journey-item');
+            function updateActive() {
+                const scrollY = window.scrollY;
+                items.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    const mid = rect.top + rect.height / 2;
+                    const winMid = window.innerHeight / 2;
+                    if (mid < winMid + 100 && mid > -100) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', updateActive);
+            window.addEventListener('load', updateActive);
+            window.addEventListener('resize', updateActive);
+        })();
+    </script>
+</body>
+
+</html>
