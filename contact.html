@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickEmpire – Contact Us</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.jpg" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description"
+        content="ClickEmpire – contact us for digital marketing, web development, and branding services. Reach out via WhatsApp, phone, or email." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/vendors/growim-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-flipster-master/jquery.flipster.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/growim.css" />
+    <link rel="stylesheet" href="assets/css/growim-color-1.css" />
+
+    <style>
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-section .contact-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            padding: 30px 25px;
+            transition: 0.3s;
+            height: 100%;
+            text-align: center;
+        }
+
+        .contact-section .contact-card:hover {
+            border-color: var(--growim-primary);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(99, 90, 217, 0.08);
+        }
+
+        .contact-section .contact-card .icon {
+            width: 70px;
+            height: 70px;
+            background: #f0edff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 28px;
+            color: var(--growim-primary);
+            transition: 0.3s;
+        }
+
+        .contact-section .contact-card:hover .icon {
+            background: var(--growim-primary);
+            color: #fff;
+        }
+
+        .contact-section .contact-card h5 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .contact-section .contact-card p {
+            color: var(--growim-text);
+            margin-bottom: 0;
+            font-size: 15px;
+            word-break: break-word;
+        }
+
+        .contact-section .contact-card p a {
+            color: var(--growim-text);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .contact-section .contact-card p a:hover {
+            color: var(--growim-primary);
+        }
+
+        .contact-section .whatsapp-big-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: #25D366;
+            color: #fff;
+            padding: 18px 40px;
+            border-radius: 60px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            margin-top: 10px;
+            animation: contactBounce 2.5s ease-in-out infinite;
+        }
+
+        .contact-section .whatsapp-big-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+            color: #fff;
+            animation: none;
+        }
+
+        .contact-section .whatsapp-big-btn i {
+            font-size: 30px;
+        }
+
+        @keyframes contactBounce {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .contact-section .cta-box {
+            background: #f9f6f1;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section .cta-box h3 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact-section .cta-box p {
+            color: var(--growim-text);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .contact-section .office-hours {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-section .office-hours span {
+            background: #fff;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 14px;
+            border: 1px solid #e8e8e8;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section .whatsapp-big-btn {
+                padding: 14px 28px;
+                font-size: 17px;
+            }
+
+            .contact-section .whatsapp-big-btn i {
+                font-size: 24px;
+            }
+
+            .contact-section .cta-box {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Floating WhatsApp (already in all pages) - keep it here too */
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <p>Click Empire Marketing</p>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON (bounce) -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: whatsappBounce 2.5s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            animation: none;
+            transform: scale(1.08);
+            filter: drop-shadow(0 8px 25px rgba(37, 211, 102, 0.4));
+        }
+
+        .whatsapp-float .whatsapp-icon {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s ease;
+            border: 3px solid #fff;
+        }
+
+        .whatsapp-float .whatsapp-icon i {
+            font-size: 34px;
+            color: #fff;
+        }
+
+        .whatsapp-float .whatsapp-tooltip {
+            position: absolute;
+            left: 75px;
+            background: #fff;
+            color: #075E54;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            border: 1px solid #f0f0f0;
+        }
+
+        .whatsapp-float .whatsapp-tooltip::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-right-color: #fff;
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .whatsapp-float .whatsapp-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.25);
+            animation: whatsappPulse 2.5s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .whatsapp-float .whatsapp-pulse:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes whatsappBounce {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes whatsappPulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .whatsapp-float {
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-float .whatsapp-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-float .whatsapp-icon i {
+                font-size: 28px;
+            }
+
+            .whatsapp-float .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+
+    <a href="https://wa.me/923162654079?text=Hello%21%20I%20want%20your%20services%20right%20now.%20Can%20you%20please%20guide%20me%20when%20you%20are%20available%3F"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="main-header main-header--two sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__inner__bg"></div>
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.jpg" alt="ClickEmpire" width="160">
+                        </a>
+                    </div>
+                    <nav class="main-header__nav main-menu">
+                        <ul class="main-menu__list">
+                            <!-- Home - Direct Link -->
+                            <li><a href="index.html">Home</a></li>
+
+                            <!-- Demos - Separate Megamenu -->
+                            <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
+                                <a href="#">Demos</a>
+                                <ul>
+                                    <li>
+                                        <div class="megamenu-popup">
+                                            <a href="#" class="megamenu-clickable--close"><span
+                                                    class="icon-close"></span></a>
+                                            <div class="megamenu-popup__content">
+                                                <div class="demo-one">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo1.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo2.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-2.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-2-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo3.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-3.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-3-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo4.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-4.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-4-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo5.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-5.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-5-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="about.html">About</a></li>
+
+                            <!-- Pages Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Our Portfolio</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Services Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Service Page</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Terms & Privacy -->
+                            <li><a href="terms-conditions.html">Terms</a></li>
+                            <li><a href="privacy-policy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-header__right">
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="main-header__toggler"><span class="flaticon-menu"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-header"
+            style="background-color: var(--growim-black); padding-top: 220px; padding-bottom: 100px;">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner1.jpeg);"></div>
+            <div class="container">
+                <h2 class="page-header__title">Contact Us</h2>
+                <ul class="growim-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span>Contact</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">GET IN TOUCH</h6>
+                    <h3 class="sec-title__title">Let's <span>Connect</span> & Grow Together</h3>
+                    <p style="max-width: 600px; margin: 15px auto 0;">We're here to help you scale your business. Reach
+                        out to us anytime via WhatsApp, phone, or email.</p>
+                </div>
+
+                <!-- Contact Cards -->
+                <div class="row gutter-y-30 mt-4">
+                    <!-- WhatsApp -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-card">
+                            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                            <h5>WhatsApp</h5>
+                            <p><a href="https://wa.me/923162654079?text=Hello%21%20I%20want%20your%20services%20right%20now.%20Can%20you%20please%20guide%20me%20when%20you%20are%20available%3F"
+                                    target="_blank">+92 316 2654079</a></p>
+                            <p style="font-size: 13px; color: #25D366; font-weight: 600;">Click to chat instantly</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-card">
+                            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                            <h5>Phone</h5>
+                            <p><a href="tel:923162654079">+92 316 2654079</a></p>
+                            <p><a href="tel:923294890081">+92 329 4890081</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-card">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <h5>Email</h5>
+                            <p><a href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></p>
+                            <p style="font-size: 13px; color: var(--growim-text);">We reply within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Big Button (instead of contact form) -->
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div
+                            style="background: linear-gradient(135deg, #f0f7f0 0%, #e8f5e9 100%); border-radius: 30px; padding: 50px 30px; border: 2px dashed #25D366;">
+                            <h3 style="font-weight: 800; margin-bottom: 10px;">Ready to work with us?</h3>
+                            <p style="color: var(--growim-text); font-size: 17px; margin-bottom: 25px;">Click the button
+                                below to start a conversation on WhatsApp. We'll get back to you immediately.</p>
+                            <a href="https://wa.me/923162654079?text=Hello%21%20I%20want%20your%20services%20right%20now.%20Can%20you%20please%20guide%20me%20when%20you%20are%20available%3F"
+                                target="_blank" class="whatsapp-big-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                Start Chat on WhatsApp
+                            </a>
+                            <p style="margin-top: 18px; font-size: 14px; color: #888;">
+                                <i class="fas fa-clock" style="color: #25D366;"></i> We usually reply as soon as
+                                possible
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Hours & Additional Info -->
+                <div class="cta-box">
+                    <h3><i class="fas fa-clock" style="color: var(--growim-primary);"></i> Office Hours</h3>
+                    <div class="office-hours">
+                        <span><strong>Monday - Saturday:</strong> 12:00 PM – 9:00 PM</span>
+                        <span><strong>Sunday:</strong> Closed</span>
+                    </div>
+                    <!-- <p style="margin-top: 20px; font-size: 15px;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--growim-primary);"></i> 
+                        Office #B19, Basement, The Central Mall, Saddar Zainab, Karachi, Pakistan
+                    </p> -->
+                    <p style="font-size: 14px; color: #888;">
+                        <i class="fas fa-globe"></i> www.ClickEmpireMarketing.com
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
+                        <a href="https://facebook.com" target="_blank"
+                            style="color: var(--growim-text); font-size: 22px; transition: 0.3s;"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"
+                            style="color: var(--growim-text); font-size: 22px; transition: 0.3s;"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"
+                            style="color: var(--growim-text); font-size: 22px; transition: 0.3s;"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank"
+                            style="color: var(--growim-text); font-size: 22px; transition: 0.3s;"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank"
+                            style="color: var(--growim-text); font-size: 22px; transition: 0.3s;"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-one">
+            <div class="cta-one__bg" style="background-image: url(assets/images/shapes/cta-bg-1-1.png);"></div>
+            <div class="cta-one__shape-one" style="background-image: url(assets/images/shapes/cta-1-shape-1.png);">
+            </div>
+            <div class="cta-one__shape-two" style="background-image: url(assets/images/shapes/cta-1-shape-2.png);">
+            </div>
+            <div class="cta-one__shape-three" style="background-image: url(assets/images/shapes/cta-1-shape-3.png);">
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="main-footer-two" style="background-image: url(assets/images/shapes/footer-bg-2-1.png);">
+            <div class="main-footer-two__bg"></div>
+            <div class="main-footer-two__shape"
+                style="background-image: url(assets/images/shapes/footer-2-shape-1.png);"></div>
+            <div class="main-footer-two__top">
+                <div class="container">
+                    <div class="row">
+                        <!-- About / Logo -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="assets/images/logo.jpg" width="160" alt="ClickEmpire">
+                                </a>
+                                <div class="footer-widget__social">
+                                    <p class="footer-widget__social__text">Follow on</p>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-6 col-xl-2">
+                            <div class="footer-widget">
+                                <h2 class="footer-widget__title">Quick Links</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="faq.html">FAQ's</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Services (no links) -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Our Services</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li>Social Media Management</li>
+                                    <li>Performance Marketing</li>
+                                    <li>Graphic & Branding</li>
+                                    <li>Web Design & Development</li>
+                                    <li>Google Ads / PPC</li>
+                                    <li>Search Engine Optimization</li>
+                                    <li>Video Editing</li>
+                                    <li>AI Image & Video Ads</li>
+                                    <li>Custom Coding / Web Apps</li>
+                                    <li>Shopify Development</li>
+                                    <li>WordPress Development</li>
+                                    <li>Facebook Ads</li>
+                                    <li>TikTok Ads</li>
+                                    <li>Paid Website Templates</li>
+                                    <li>Ad Management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--contact">
+                                <h2 class="footer-widget__title">Contact Info</h2>
+                                <ul class="list-unstyled footer-widget__info">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923162654079">+92 316 2654079</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923294890081">+92 329 4890081</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a
+                                            href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-clock"></i>
+                                        Mon-Sat: 12:00 PM – 9:00 PM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-two__bottom">
+                <div class="container">
+                    <div class="main-footer-two__bottom__inner">
+                        <p class="main-footer-two__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span> by ClickEmpire Marketing.
+                        </p>
+                        <ul class="main-footer-two__bottom__menu">
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Nav / Search / Sidebar -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="index.html"><img src="assets/images/logo-light.png" width="155" alt=""></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:923162654079">+92 316 2654079</a></li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" class="growim-btn"><span class="growim-btn__text"><i
+                            class="flaticon-search"></i></span></button>
+            </form>
+        </div>
+    </div>
+
+    <aside class="sidebar-one">
+        <div class="sidebar-one__overlay"></div>
+        <div class="sidebar-one__content">
+            <div class="sidebar-one__close"><i class="flaticon-close"></i></div>
+            <div class="sidebar-one__logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="ClickEmpire"
+                        width="160"></a></div>
+            <p class="sidebar-one__text">We build and execute strategies designed to deliver quick wins and long-term
+                scalable results for your business.</p>
+            <h4 class="sidebar-one__title">Contact Info:</h4>
+            <ul class="sidebar-one__info">
+                <li><span class="fas fa-envelope"></span><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923162654079">+92 316 2654079</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923294890081">+92 329 4890081</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/jquery-flipster-master/jquery.flipster.min.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <script src="assets/js/growim.js"></script>
+</body>
+
+</html>

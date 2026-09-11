@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickEmpire - Services</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.jpg" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description"
+        content="ClickEmpire – comprehensive digital marketing, web development, graphic design, and AI ad services." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/vendors/growim-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-flipster-master/jquery.flipster.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/growim.css" />
+    <link rel="stylesheet" href="assets/css/growim-color-1.css" />
+    <style>
+        .service-card-icon {
+            font-size: 48px;
+            color: var(--growim-primary);
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .service-card-icon i {
+            display: inline-block;
+        }
+
+        .service-card-icon:hover {
+            transform: translateY(-5px);
+            color: var(--growim-base);
+        }
+
+        .web-app-section {
+            background: #f8faff;
+            padding: 40px 0;
+            border-radius: 20px;
+        }
+
+        .web-app-section .sec-title__title {
+            font-size: 36px;
+        }
+
+        .price-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            height: 100%;
+            border: 1px solid #eee;
+        }
+
+        .price-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(99, 90, 217, 0.1);
+            border-color: var(--growim-primary);
+        }
+
+        .price-card .price {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--growim-primary);
+        }
+
+        .price-card ul {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .price-card ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 400;
+        }
+
+        .price-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .btn-outline-growim {
+            border: 2px solid var(--growim-primary);
+            color: var(--growim-primary);
+            background: transparent;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 700;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-outline-growim:hover {
+            background: var(--growim-primary);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .list-bullet {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-bullet li {
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .list-bullet li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--growim-primary);
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <p>Click Empire Marketing</p>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- HEADER (same as index.html) -->
+        <header class="main-header main-header--two sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__inner__bg"></div>
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.jpg" alt="ClickEmpire" width="160">
+                        </a>
+                    </div>
+                    <nav class="main-header__nav main-menu">
+                        <ul class="main-menu__list">
+                            <!-- Home - Direct Link -->
+                            <li><a href="index.html">Home</a></li>
+
+                            <!-- Demos - Separate Megamenu -->
+                            <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
+                                <a href="#">Demos</a>
+                                <ul>
+                                    <li>
+                                        <div class="megamenu-popup">
+                                            <a href="#" class="megamenu-clickable--close"><span
+                                                    class="icon-close"></span></a>
+                                            <div class="megamenu-popup__content">
+                                                <div class="demo-one">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo1.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo2.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-2.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-2-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo3.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-3.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-3-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo4.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-4.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-4-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <div class="demo-one__card">
+                                                                    <div class="demo-one__image">
+                                                                        <img src="assets/images/demo5.PNG" alt="growim">
+                                                                        <div class="demo-one__btns">
+                                                                            <a href="index-5.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                            <a href="index-5-one-page.html"
+                                                                                class="growim-btn demo-one__btn"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="demo-one__content">
+                                                                        <h3 class="demo-one__title"></h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="about.html">About</a></li>
+
+                            <!-- Pages Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Our Portfolio</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Services Dropdown -->
+                            <li class="dropdown">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Service Page</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Terms & Privacy -->
+                            <li><a href="terms-conditions.html">Terms</a></li>
+                            <li><a href="privacy-policy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-header__right">
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="main-header__toggler"><span class="flaticon-menu"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-header"
+            style="background-color: var(--growim-black); padding-top: 220px; padding-bottom: 100px;">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner1.jpeg);"></div>
+            <div class="container">
+                <h2 class="page-header__title">Our Services</h2>
+                <ul class="growim-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span>Services</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- MAIN SERVICES SECTION (based on PDF + web apps) -->
+        <section class="service-two" style="padding-top: 60px; background: #fff;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">WHAT WE OFFER</h6>
+                    <h3 class="sec-title__title">Full-Service Digital <span>Solutions</span></h3>
+                    <p style="max-width: 700px; margin: 20px auto 0;">From social media and web development to AI ads
+                        and branding – we deliver results.</p>
+                </div>
+
+                <!-- Service categories from PDF -->
+                <div class="row gutter-y-30 mt-5">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Social Media Management</a></h3>
+                                <p class="service-two__item__text">Strategy, content, and engagement across Facebook,
+                                    Instagram, TikTok & more.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Performance Marketing</a></h3>
+                                <p class="service-two__item__text">ROI-focused campaigns on Meta, Google, TikTok with
+                                    data-driven optimization.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Graphic & Branding</a></h3>
+                                <p class="service-two__item__text">Logo, stationery, social posts, and complete brand
+                                    identity design.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Web Design & Development</a></h3>
+                                <p class="service-two__item__text">Custom-coded, WordPress, Shopify – fast, responsive,
+                                    conversion-optimized.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Google Ads / PPC</a></h3>
+                                <p class="service-two__item__text">Search & display ads that drive targeted traffic and
+                                    maximize ROAS.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Search Engine Optimization</a></h3>
+                                <p class="service-two__item__text">On-page, off-page, technical SEO to boost organic
+                                    visibility and rankings.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Video Editing</a></h3>
+                                <p class="service-two__item__text">Professional video editing for reels, ads, YouTube,
+                                    and brand stories.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">AI Image & Video Ads</a></h3>
+                                <p class="service-two__item__text">Next-gen AI-generated creatives that capture
+                                    attention and convert.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-two__item">
+                            <div class="service-two__item__content">
+                                <h3 class="service-two__item__title"><a href="#">Custom Coding / Web Apps</a></h3>
+                                <p class="service-two__item__text">Full-stack web apps, portals, authentication,
+                                    authorization, and dashboards.</p>
+                                <a class="service-two__item__rm" href="#"><i class="flaticon-up-right-arrow"></i></a>
+                                <div class="service-two__item__number"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEB APP PORTAL SECTION (Custom coding / authentication / portals) -->
+        <section class="web-app-section" style="padding: 60px 0 80px;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">CUSTOM WEB APPLICATIONS</h6>
+                    <h3 class="sec-title__title">Powerful <span>Web Apps</span> & Portals</h3>
+                    <p style="max-width: 700px; margin: 20px auto;">We build scalable, secure, and feature-rich web
+                        applications with complete authentication, authorization, and custom dashboards.</p>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-md-4">
+                        <div class="price-card text-center">
+                            <div class="service-card-icon"><i class="fas fa-user-lock"></i></div>
+                            <h4>Authentication & Authorization</h4>
+                            <ul class="list-bullet text-start">
+                                <li>Login / Signup (Email, Social)</li>
+                                <li>Role-based access (Admin, User, etc.)</li>
+                                <li>JWT / Session based security</li>
+                                <li>Password reset & email verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-card text-center">
+                            <div class="service-card-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h4>Custom Dashboards & Portals</h4>
+                            <ul class="list-bullet text-start">
+                                <li>Admin panels & reporting</li>
+                                <li>Client / Student / Employee portals</li>
+                                <li>Data visualization & analytics</li>
+                                <li>CRUD operations with APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-card text-center">
+                            <div class="service-card-icon"><i class="fas fa-code"></i></div>
+                            <h4>Full-Stack Development</h4>
+                            <ul class="list-bullet text-start">
+                                <li>React / Vue / Angular frontends</li>
+                                <li>Node.js / Python / PHP backends</li>
+                                <li>Database design (SQL / NoSQL)</li>
+                                <li>RESTful APIs & integrations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="contact.html" class="growim-btn"><span class="growim-btn__text">Let’s Build Your Web
+                            App</span><span class="growim-btn__icon"><i class="flaticon-up-right-arrow"></i></span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING PLANS (from PDF) -->
+        <section class="package-two" style="background: #f9f6f1; padding: 80px 0;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">PRICING PLANS</h6>
+                    <h3 class="sec-title__title">Choose Your <span>Package</span></h3>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-one__item animated fadeInUp">
+                            <div class="package-one__item__inner">
+                                <div class="package-one__item__price">Rs.15,000 <span>per month</span></div>
+                                <h5 class="package-one__item__title">STARTER</h5>
+                                <ul class="package-one__item__list">
+                                    <li><i class="flaticon-check"></i>2 Platform</li>
+                                    <li><i class="flaticon-check"></i>Facebook & Instagram</li>
+                                    <li><i class="flaticon-check"></i>2 Reels/motion graphic</li>
+                                    <li><i class="flaticon-check"></i>Social Media Account Setup</li>
+                                    <li><i class="flaticon-check"></i>Brand Awareness Strategy</li>
+                                    <li><i class="flaticon-check"></i>Event Wishing Posters</li>
+                                    <li><i class="flaticon-check"></i>Managment Ads Campaign</li>
+                                    <li><i class="flaticon-check"></i>Weekly Strategy Call</li>
+                                    <li><i class="flaticon-check"></i>Stories</li>
+                                    <li><i class="flaticon-check"></i>Monthly Report</li>
+                                    <li><i class="flaticon-check"></i>Setup & Onboarding</li>
+                                    <li><i class="flaticon-check"></i>24/7 system Monitoring</li>
+                                    <li><i class="flaticon-check"></i>Awesome Consulting</li>
+                                </ul>
+                                <a class="growim-btn" href="contact.html"><span class="growim-btn__text">Get The
+                                        Plan</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-one__item animated fadeInUp">
+                            <div class="package-one__item__inner">
+                                <div class="package-one__item__price">Rs.19,999 <span>per month</span></div>
+                                <h5 class="package-one__item__title">STANDARD</h5>
+                                <ul class="package-one__item__list">
+                                    <li><i class="flaticon-check"></i>2 Facebook & Instagram</li>
+                                    <li><i class="flaticon-check"></i>18 Static Posts DesignING</li>
+                                    <li><i class="flaticon-check"></i>4 Reels/motion graphic</li>
+                                    <li><i class="flaticon-check"></i>Social Media Account Setup</li>
+                                    <li><i class="flaticon-check"></i>Content Creation</li>
+                                    <li><i class="flaticon-check"></i>Audience Research</li>
+                                    <li><i class="flaticon-check"></i>Event Wishing Posters</li>
+                                    <li><i class="flaticon-check"></i>Managment Ads Campaign</li>
+                                    <li><i class="flaticon-check"></i>Content Planner</li>
+                                    <li><i class="flaticon-check"></i>Highlights & Stories</li>
+                                    <li><i class="flaticon-check"></i>Weekly Strategy Call</li>
+                                    <li><i class="flaticon-check"></i>Monthly Report</li>
+                                    <li><i class="flaticon-check"></i>Setup & Onboarding</li>
+                                    <li><i class="flaticon-check"></i>24/7 system Monitoring</li>
+                                    <li><i class="flaticon-check"></i>Awesome Consulting</li>
+                                </ul>
+                                <a class="growim-btn" href="contact.html"><span class="growim-btn__text">Get The
+                                        Plan</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-one__item animated fadeInUp">
+                            <div class="package-one__item__inner">
+                                <div class="package-one__item__price">Rs.30,000 <span>per month</span></div>
+                                <h5 class="package-one__item__title">ADVANCE</h5>
+                                <ul class="package-one__item__list">
+                                    <li><i class="flaticon-check"></i>Facebook & Instagram</li>
+                                    <li><i class="flaticon-check"></i>25 Static Posts Design</li>
+                                    <li><i class="flaticon-check"></i>6 Reels/motion graphic</li>
+                                    <li><i class="flaticon-check"></i>Custom AI Videos Ads</li>
+                                    <li><i class="flaticon-check"></i>Content Creation</li>
+                                    <li><i class="flaticon-check"></i>Advance hashtag Strategy</li>
+                                    <li><i class="flaticon-check"></i>Audience targeting</li>
+                                    <li><i class="flaticon-check"></i>Ads Account setup</li>
+                                    <li><i class="flaticon-check"></i>Website purchases</li>
+                                    <li><i class="flaticon-check"></i>Event Wishing Posters</li>
+                                    <li><i class="flaticon-check"></i>Meta Ads Campaign Management</li>
+                                    <li><i class="flaticon-check"></i>Highlights & Stories</li>
+                                    <li><i class="flaticon-check"></i>Content Planner</li>
+                                    <li><i class="flaticon-check"></i>Weekly Strategy Call</li>
+                                    <li><i class="flaticon-check"></i>Monthly Report</li>
+                                    <li><i class="flaticon-check"></i>Setup & Onboarding</li>
+                                    <li><i class="flaticon-check"></i>24/7 system Monitoring</li>
+                                    <li><i class="flaticon-check"></i>Awesome Consulting</li>
+                                </ul>
+                                <a class="growim-btn" href="contact.html"><span class="growim-btn__text">Get The
+                                        Plan</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6 mx-auto">
+                        <div class="package-one__item animated fadeInUp text-center">
+                            <div class="package-one__item__inner">
+                                <div class="package-one__item__price">Rs.90,000 <span>Complete Bundle</span></div>
+                                <h5 class="package-one__item__title">BUNDLE</h5>
+                                <p><strong>Complete Brand Setup + Social Media + Professional Website + Marketing
+                                        Strategy</strong></p>
+                                <ul class="package-one__item__list text-start">
+                                    <li><i class="flaticon-check"></i>2 Platform Facebook & Instagram</li>
+                                    <li><i class="flaticon-check"></i>Pages Creation</li>
+                                    <li><i class="flaticon-check"></i>20 Static Posts Designing</li>
+                                    <li><i class="flaticon-check"></i>3 Reels/motion graphic</li>
+                                    <li><i class="flaticon-check"></i>1 Ai video ad</li>
+                                    <li><i class="flaticon-check"></i>Social Media Account Setup</li>
+                                    <li><i class="flaticon-check"></i>Page Management</li>
+                                    <li><i class="flaticon-check"></i>Enhance Awareness</li>
+                                    <li><i class="flaticon-check"></i>Event Wishing Posters</li>
+                                    <li><i class="flaticon-check"></i>Managment Ads Campaign</li>
+                                    <li><i class="flaticon-check"></i>Highlights & Stories</li>
+                                    <li><i class="flaticon-check"></i>website maintenance</li>
+                                    <li><i class="flaticon-check"></i>Content Planner</li>
+                                    <li><i class="flaticon-check"></i>Weekly Strategy Call</li>
+                                    <li><i class="flaticon-check"></i>Monthly Report</li>
+                                    <li><i class="flaticon-check"></i>Setup & Onboarding</li>
+                                    <li><i class="flaticon-check"></i>24/7 system Monitoring</li>
+                                    <li><i class="flaticon-check"></i>Awesome Consulting</li>
+                                </ul>
+                                <a class="growim-btn" href="contact.html"><span class="growim-btn__text">Get The
+                                        Bundle</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEBSITE DEVELOPMENT PRICING (from image) -->
+        <section style="padding: 80px 0; background: #fff;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">WEBSITE DEVELOPMENT</h6>
+                    <h3 class="sec-title__title">Website <span>Packages</span></h3>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-md-4">
+                        <div class="price-card">
+                            <h4>Basic</h4>
+                            <div class="price">Rs.7,999</div>
+                            <ul>
+                                <li>1 Year Domain (.store)</li>
+                                <li>1 Year Hosting</li>
+                                <li>Website (1-3 pages)</li>
+                                <li>Modern UX/UI Layout</li>
+                                <li>Paid Themes</li>
+                                <li>1 Website Banner</li>
+                                <li>SSL Certificate (1 Year)</li>
+                                <li>Mobile Responsive</li>
+                                <li>Social Media Integration</li>
+                                <li>WhatsApp Integration</li>
+                                <li>1 week Support</li>
+                            </ul>
+                            <a href="contact.html" class="btn-outline-growim">Choose Plan</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-card" style="border-color: var(--growim-primary);">
+                            <span
+                                style="background: var(--growim-primary); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 14px; display: inline-block; margin-bottom: 10px;">Most
+                                Popular</span>
+                            <h4>Premium</h4>
+                            <div class="price">Rs.15,000</div>
+                            <ul>
+                                <li>1 Year Domain (.com/.net/.store)</li>
+                                <li>1 Year Hosting</li>
+                                <li>Website (4-6 pages)</li>
+                                <li>Modern UX/UI Layout</li>
+                                <li>Paid Themes</li>
+                                <li>2 Website Banners</li>
+                                <li>SSL Certificate (1 Year)</li>
+                                <li>Mobile Responsive</li>
+                                <li>Social Media Integration</li>
+                                <li>2 Business E-Mail</li>
+                                <li>WhatsApp Integration</li>
+                                <li>1 Month Support</li>
+                            </ul>
+                            <a href="contact.html" class="btn-outline-growim">Choose Plan</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-card">
+                            <h4>Premium +</h4>
+                            <div class="price">Rs.24,000</div>
+                            <ul>
+                                <li>1 Year Domain (.com/.net/.store)</li>
+                                <li>1 Year Hosting</li>
+                                <li>Website (up to 8 pages)</li>
+                                <li>Modern UX/UI Layout</li>
+                                <li>Paid Themes</li>
+                                <li>6 Website Banners</li>
+                                <li>SSL Certificate (1 Year)</li>
+                                <li>Mobile Responsive</li>
+                                <li>Social Media Integration</li>
+                                <li>5 Business E-Mail</li>
+                                <li>WhatsApp Integration</li>
+                                <li>1 Month Support</li>
+                            </ul>
+                            <a href="contact.html" class="btn-outline-growim">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p style="font-weight: 600;">* Custom coding websites & extra pages charged separately.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRAPHIC DESIGN / LOGO / STATIONERY PRICES (from PDF) -->
+        <section style="padding: 60px 0; background: #f9f6f1;">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h6 class="sec-title__tagline">GRAPHIC & BRANDING</h6>
+                    <h3 class="sec-title__title">Design <span>Pricing</span></h3>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-md-6">
+                        <div class="price-card">
+                            <h4>Social Media Posts</h4>
+                            <ul class="list-unstyled">
+                                <li><strong>1 Post</strong> – Rs.1,000</li>
+                                <li><strong>5 Posts</strong> – Rs.4,000</li>
+                                <li><strong>10 Posts</strong> – Rs.6,000</li>
+                                <li><strong>20 Posts</strong> – Rs.10,000</li>
+                            </ul>
+                            <p><small>3 revisions, all files included.</small></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="price-card">
+                            <h4>Logo & Stationery</h4>
+                            <ul class="list-unstyled">
+                                <li><strong>Starter Logo</strong> – Rs.2,500 (3-4 options)</li>
+                                <li><strong>Complete Branding</strong> – Rs.6,000 (Logo + Stationery + Animation)</li>
+                            </ul>
+                            <p><small>Unlimited changes on selected design, all files included.</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="price-card">
+                            <h4>Creative Content</h4>
+                            <ul class="list-unstyled">
+                                <li><strong>AI Product Shoot (1 product / 3 pics)</strong> – Rs.2,000</li>
+                                <li><strong>Vocalized Video Ad</strong> – Rs.5,000</li>
+                                <li><strong>UGC Video</strong> – Rs.8,000</li>
+                                <li><strong>Influencer Video + Collaboration</strong> – Rs.15,000</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="price-card">
+                            <h4>E-Commerce Website (WordPress/Shopify)</h4>
+                            <div class="price">Rs.30,000</div>
+                            <ul>
+                                <li>10 pages</li>
+                                <li>Upto 20+ product upload</li>
+                                <li>Domain (1 Year) + SSL</li>
+                                <li>Payment gateway & cart</li>
+                                <li>Social & WhatsApp integrated</li>
+                                <li>1 Month bug fixes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / CONTACT (same as index) -->
+        <section class="cta-one">
+            <div class="cta-one__bg" style="background-image: url(assets/images/shapes/cta-bg-1-1.png);"></div>
+            <div class="cta-one__shape-one" style="background-image: url(assets/images/shapes/cta-1-shape-1.png);">
+            </div>
+            <div class="cta-one__shape-two" style="background-image: url(assets/images/shapes/cta-1-shape-2.png);">
+            </div>
+            <div class="cta-one__shape-three" style="background-image: url(assets/images/shapes/cta-1-shape-3.png);">
+            </div>
+        </section>
+
+        <!-- FOOTER (same as index) -->
+        <footer class="main-footer-two" style="background-image: url(assets/images/shapes/footer-bg-2-1.png);">
+            <div class="main-footer-two__bg"></div>
+            <div class="main-footer-two__shape"
+                style="background-image: url(assets/images/shapes/footer-2-shape-1.png);"></div>
+            <div class="main-footer-two__top">
+                <div class="container">
+                    <div class="row">
+                        <!-- About / Logo -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="assets/images/logo.jpg" width="160" alt="ClickEmpire">
+                                </a>
+                                <div class="footer-widget__social">
+                                    <p class="footer-widget__social__text">Follow on</p>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-6 col-xl-2">
+                            <div class="footer-widget">
+                                <h2 class="footer-widget__title">Quick Links</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="faq.html">FAQ's</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Services (no links) -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Our Services</h2>
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li>Social Media Management</li>
+                                    <li>Performance Marketing</li>
+                                    <li>Graphic & Branding</li>
+                                    <li>Web Design & Development</li>
+                                    <li>Google Ads / PPC</li>
+                                    <li>Search Engine Optimization</li>
+                                    <li>Video Editing</li>
+                                    <li>AI Image & Video Ads</li>
+                                    <li>Custom Coding / Web Apps</li>
+                                    <li>Shopify Development</li>
+                                    <li>WordPress Development</li>
+                                    <li>Facebook Ads</li>
+                                    <li>TikTok Ads</li>
+                                    <li>Paid Website Templates</li>
+                                    <li>Ad Management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--contact">
+                                <h2 class="footer-widget__title">Contact Info</h2>
+                                <ul class="list-unstyled footer-widget__info">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923162654079">+92 316 2654079</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:923294890081">+92 329 4890081</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a
+                                            href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-clock"></i>
+                                        Mon-Sat: 12:00 PM – 9:00 PM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-two__bottom">
+                <div class="container">
+                    <div class="main-footer-two__bottom__inner">
+                        <p class="main-footer-two__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span> by ClickEmpire Marketing.
+                        </p>
+                        <ul class="main-footer-two__bottom__menu">
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Nav / Search / Sidebar (same as index) -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="index.html"><img src="assets/images/logo-light.png" width="155" alt=""></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:923162654079">+92 316 2654079</a></li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" class="growim-btn"><span class="growim-btn__text"><i
+                            class="flaticon-search"></i></span></button>
+            </form>
+        </div>
+    </div>
+
+    <aside class="sidebar-one">
+        <div class="sidebar-one__overlay"></div>
+        <div class="sidebar-one__content">
+            <div class="sidebar-one__close"><i class="flaticon-close"></i></div>
+            <div class="sidebar-one__logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="ClickEmpire"
+                        width="160"></a></div>
+            <p class="sidebar-one__text">We build and execute strategies designed to deliver quick wins and long-term
+                scalable results for your business.</p>
+            <h4 class="sidebar-one__title">Contact Info:</h4>
+            <ul class="sidebar-one__info">
+                <li><span class="fas fa-envelope"></span><a
+                        href="mailto:clickempiremarketing@gmail.com">clickempiremarketing@gmail.com</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923162654079">+92 316 2654079</a></li>
+                <li><span class="fas fa-phone-alt"></span><a href="tel:923294890081">+92 329 4890081</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923162654079?text=Hi%20ClickEmpire%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-pulse"></span>
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/jquery-flipster-master/jquery.flipster.min.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <script src="assets/js/growim.js"></script>
+</body>
+
+</html>
